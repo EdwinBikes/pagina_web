@@ -16,13 +16,16 @@ function openOther(open,close){
     if(open == portfolio.classList[0]){
         portfolio.classList.add("active");
         botonPortfolio.classList.add("active");
+        window.scrollTo(0, 0);
     }
     if(open == blog.classList[0]){
         blog.classList.add("active");
         botonBlog.classList.add("active");
+        window.scrollTo(0, 0);
     }
     if(open == resume.classList[0]){
         resume.classList.add("active");
         botonResume.classList.add("active");
+        window.scrollTo(0, 0);
     }
 }
