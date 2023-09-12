@@ -2107,9 +2107,9 @@ textarea.form-input::-webkit-resizer {
     text-align: center;
   }
 
-  .info-content .title {
+  /* .info-content .title {
     margin: auto;
-  }
+  } */
 
   .info_more-btn {
     display: none;
