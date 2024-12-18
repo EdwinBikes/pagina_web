@@ -2146,6 +2146,19 @@ textarea.form-input::-webkit-resizer {
 
 
 
+/** prueba boton
+*/
+
+article {
+  display: none;
+}
+
+article.active {
+  display: block;
+}
+
+
+
   /**
 	 * RESUME
 	 */
