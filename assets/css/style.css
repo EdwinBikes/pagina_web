@@ -2149,11 +2149,11 @@ textarea.form-input::-webkit-resizer {
 /** prueba boton
 */
 
-article {
+.section {
   display: none;
 }
 
-article.active {
+.section.active {
   display: block;
 }
 
