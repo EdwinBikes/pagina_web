@@ -43,18 +43,19 @@ overlay.addEventListener("click", toggleTestimonialsModal);
 
 
 //prueba boton
-function openOther(sectionToShow) {
+function changeSection(sectionId) {
   // Ocultar todas las secciones
-  document.querySelectorAll("article").forEach((section) => {
-    section.classList.remove("active");
+  document.querySelectorAll('.section').forEach((section) => {
+    section.classList.remove('active');
   });
 
   // Mostrar la sección seleccionada
-  const section = document.getElementById(sectionToShow);
-  if (section) {
-    section.classList.add("active");
+  const selectedSection = document.getElementById(sectionId);
+  if (selectedSection) {
+    selectedSection.classList.add('active');
   }
 }
+
 
 //aquitermina prueba
 
