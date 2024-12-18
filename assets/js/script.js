@@ -41,6 +41,23 @@ overlay.addEventListener("click", toggleTestimonialsModal);
 
 // Rest of your script...
 
+
+//prueba boton
+function openOther(sectionToShow) {
+  // Ocultar todas las secciones
+  document.querySelectorAll("article").forEach((section) => {
+    section.classList.remove("active");
+  });
+
+  // Mostrar la sección seleccionada
+  const section = document.getElementById(sectionToShow);
+  if (section) {
+    section.classList.add("active");
+  }
+}
+
+//aquitermina prueba
+
 // Obtén una referencia a la lista de botones de navegación
 const navbarList = document.querySelector(".navbar-list");
 
