@@ -81,34 +81,30 @@ document.querySelectorAll("[data-open-section]").forEach((card) => {
 });
 
 // Form submission: sends the client's data by email.
-const contactForm = document.querySelector("[data-form]");
-if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+const form = document.querySelector("[data-form]");
 
-    const name = (contactForm.querySelector('[name="full_name"]')?.value || "").trim();
-    const email = (contactForm.querySelector('[name="email"]')?.value || "").trim();
-    const message = (contactForm.querySelector('[name="message"]')?.value || "").trim();
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    if (!name || !email || !message) return;
+  const name = document.querySelector('[name="full_name"]').value.trim();
+  const email = document.querySelector('[name="email"]').value.trim();
+  const message = document.querySelector('[name="message"]').value.trim();
 
-    const subject = encodeURIComponent(`Nuevo contacto desde la web - ${name}`);
-    const body = encodeURIComponent(
-      `Nombre: ${name}\n` +
-      `Correo: ${email}\n\n` +
-      `Mensaje:\n${message}`
-    );
+  if (!name || !email || !message) {
+    alert("Completa todos los campos.");
+    return;
+  }
 
-    window.location.href = `mailto:EdwinBykes@hotmail.com?subject=${subject}&body=${body}`;
-    contactForm.reset();
+  const text = `Hola Edwin, quiero contactarte desde tu página web.%0A%0A` +
+    `Nombre: ${name}%0A` +
+    `Correo: ${email}%0A%0A` +
+    `Mensaje:%0A${message}`;
 
-    const submitButton = contactForm.querySelector("[data-form-btn]");
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.innerHTML = "<span>Mensaje enviado</span>";
-    }
-  });
-}
+  const whatsappUrl = `https://wa.me/573057135213?text=${text}`;
+
+  window.open(whatsappUrl, "_blank");
+  form.reset();
+});
 
 // Compatibility with legacy inline handlers.
 window.changeSection = window.changeSection || ((sectionId) => showPage(sectionId));
