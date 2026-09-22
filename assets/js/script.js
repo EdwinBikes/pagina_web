@@ -80,6 +80,36 @@ document.querySelectorAll("[data-open-section]").forEach((card) => {
   });
 });
 
+// Form submission: sends the client's data by email.
+const contactForm = document.querySelector("[data-form]");
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = (contactForm.querySelector('[name="full_name"]')?.value || "").trim();
+    const email = (contactForm.querySelector('[name="email"]')?.value || "").trim();
+    const message = (contactForm.querySelector('[name="message"]')?.value || "").trim();
+
+    if (!name || !email || !message) return;
+
+    const subject = encodeURIComponent(`Nuevo contacto desde la web - ${name}`);
+    const body = encodeURIComponent(
+      `Nombre: ${name}\n` +
+      `Correo: ${email}\n\n` +
+      `Mensaje:\n${message}`
+    );
+
+    window.location.href = `mailto:EdwinBykes@hotmail.com?subject=${subject}&body=${body}`;
+    contactForm.reset();
+
+    const submitButton = contactForm.querySelector("[data-form-btn]");
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.innerHTML = "<span>Mensaje enviado</span>";
+    }
+  });
+}
+
 // Compatibility with legacy inline handlers.
 window.changeSection = window.changeSection || ((sectionId) => showPage(sectionId));
 window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
