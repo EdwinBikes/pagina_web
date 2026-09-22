@@ -45,32 +45,41 @@ testimonialsItems.forEach((item) => {
 if (modalCloseBtn) modalCloseBtn.addEventListener("click", toggleTestimonialsModal);
 if (overlay) overlay.addEventListener("click", toggleTestimonialsModal);
 
-// Navigation: works with the existing data-page attributes.
+// Navigation between the existing article tabs.
 const navbarList = document.querySelector(".navbar-list");
 const navbarLinks = document.querySelectorAll(".navbar-link");
+const articles = document.querySelectorAll("main article[data-page]");
+
+const showPage = (pageId, activeButton = null) => {
+  const targetPage = document.querySelector(`article[data-page="${pageId}"]`);
+  if (!targetPage) return;
+
+  articles.forEach((article) => article.classList.remove("active"));
+  targetPage.classList.add("active");
+
+  navbarLinks.forEach((link) => link.classList.remove("active"));
+  if (activeButton) activeButton.classList.add("active");
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 if (navbarList) {
   navbarList.addEventListener("click", (event) => {
     const button = event.target.closest(".navbar-link");
     if (!button) return;
 
-    const targetId = button.getAttribute("data-nav-link");
-    const targetSection = document.querySelector(`[data-page="${targetId}"]`);
-    if (!targetSection) return;
-
-    navbarLinks.forEach((link) => link.classList.remove("active"));
-    button.classList.add("active");
-    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    event.preventDefault();
+    showPage(button.getAttribute("data-nav-link"), button);
   });
 }
 
-// Compatibility with legacy inline handlers, without adding visual changes.
-window.changeSection = window.changeSection || ((sectionId) => {
-  const section = document.getElementById(sectionId);
-  if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+// Service cards can navigate to another existing tab.
+document.querySelectorAll("[data-open-section]").forEach((card) => {
+  card.addEventListener("click", () => {
+    showPage(card.getAttribute("data-open-section"));
+  });
 });
 
-window.openOther = window.openOther || ((sectionId) => {
-  const section = document.querySelector(`[data-page="${sectionId}"]`);
-  if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-});
+// Compatibility with legacy inline handlers.
+window.changeSection = window.changeSection || ((sectionId) => showPage(sectionId));
+window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
