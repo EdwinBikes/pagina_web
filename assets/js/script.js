@@ -2,87 +2,136 @@
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-// Sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", () => {
-  elementToggleFunc(sidebar);
-});
+const elementToggleFunc = (elem) => {
+  if (elem) {
+    elem.classList.toggle("active");
+  }
+};
+
+if (sidebarBtn && sidebar) {
+  sidebarBtn.addEventListener("click", () => {
+    elementToggleFunc(sidebar);
+  });
+}
 
 // Testimonials variables
 const testimonialsItems = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const overlay = document.querySelector("[data-overlay]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-
-// Modal variables
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
-// Function to toggle testimonials modal
 const toggleTestimonialsModal = () => {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
+  if (modalContainer && overlay) {
+    modalContainer.classList.toggle("active");
+    overlay.classList.toggle("active");
+  }
 };
 
-// Add click event to all testimonial items
-testimonialsItems.forEach(item => {
-  item.addEventListener("click", () => {
-    modalImg.src = item.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = item.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = item.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = item.querySelector("[data-testimonials-text]").innerHTML;
-    toggleTestimonialsModal();
+if (testimonialsItems.length) {
+  testimonialsItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const avatar = item.querySelector("[data-testimonials-avatar]");
+      const title = item.querySelector("[data-testimonials-title]");
+      const text = item.querySelector("[data-testimonials-text]");
+
+      if (avatar && modalImg) {
+        modalImg.src = avatar.src;
+        modalImg.alt = avatar.alt;
+      }
+
+      if (title && modalTitle) {
+        modalTitle.innerHTML = title.innerHTML;
+      }
+
+      if (text && modalText) {
+        modalText.innerHTML = text.innerHTML;
+      }
+
+      toggleTestimonialsModal();
+    });
   });
-});
-
-// Add click event to modal close button and overlay
-modalCloseBtn.addEventListener("click", toggleTestimonialsModal);
-overlay.addEventListener("click", toggleTestimonialsModal);
-
-// Rest of your script...
-
-
-//prueba boton
-function changeSection(sectionId) {
-  // Ocultar todas las secciones
-  document.querySelectorAll('.section').forEach((section) => {
-    section.classList.remove('active');
-  });
-
-  // Mostrar la sección seleccionada
-  const selectedSection = document.getElementById(sectionId);
-  if (selectedSection) {
-    selectedSection.classList.add('active');
-  }
 }
 
+if (modalCloseBtn) {
+  modalCloseBtn.addEventListener("click", toggleTestimonialsModal);
+}
 
-//aquitermina prueba
+if (overlay) {
+  overlay.addEventListener("click", toggleTestimonialsModal);
+}
 
-// Obtén una referencia a la lista de botones de navegación
+// Navigation buttons
 const navbarList = document.querySelector(".navbar-list");
+const navbarLinks = document.querySelectorAll(".navbar-link");
 
-// Agrega un evento de clic a la lista de botones de navegación
-navbarList.addEventListener("click", function (event) {
-  // Verifica si el elemento clickeado es un botón de navegación
-  if (event.target.classList.contains("navbar-link")) {
-    // Obtiene el valor del atributo 'data-nav-link' del botón
-    const targetId = event.target.getAttribute("data-nav-link");
+const activateNavigation = (targetButton) => {
+  navbarLinks.forEach((link) => link.classList.remove("active"));
+  if (targetButton) {
+    targetButton.classList.add("active");
+  }
+};
 
-    // Busca la sección correspondiente por su atributo 'data-page'
+if (navbarList) {
+  navbarList.addEventListener("click", function (event) {
+    const button = event.target.closest(".navbar-link");
+
+    if (!button) return;
+
+    const targetId = button.getAttribute("data-nav-link");
     const targetSection = document.querySelector(`[data-page="${targetId}"]`);
 
-    // Verifica si la sección existe antes de desplazar
     if (targetSection) {
-      // Desplaza la ventana del navegador a la sección
-      targetSection.scrollIntoView({ behavior: "smooth" });
-
-      // Desmarca todos los botones de navegación y marca el botón actual como activo
-      const navbarLinks = document.querySelectorAll(".navbar-link");
-      navbarLinks.forEach((link) => {
-        link.classList.remove("active");
-      });
-      event.target.classList.add("active");
+      targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      activateNavigation(button);
     }
-  }
+  });
+}
+
+// Service cards open sections
+const serviceButtons = document.querySelectorAll("[data-open-section]");
+
+serviceButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    const targetId = button.getAttribute("data-open-section");
+    const targetSection = document.querySelector(`[data-page="${targetId}"]`);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
 });
+
+// Form logic
+const form = document.querySelector("[data-form]");
+const formBtn = document.querySelector("[data-form-btn]");
+
+if (form && formBtn) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    formBtn.innerHTML = "<span>Mensaje enviado</span>";
+    formBtn.disabled = true;
+  });
+}
+
+// Safe fallback for old script references
+if (typeof window.changeSection === "undefined") {
+  window.changeSection = function (sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+}
+
+if (typeof window.openOther === "undefined") {
+  window.openOther = function (sectionId) {
+    const section = document.querySelector(`[data-page="${sectionId}"]`);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+}
