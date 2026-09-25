@@ -2333,8 +2333,8 @@ main.vsv-main {
   display:flex;
   align-items:center;
   justify-content:center;
-  background:#1c1c1f;
-  border:1px solid #26262a;
+  background:hsla(0, 0%, 0%, 0.25);
+  border:1px solid hsla(0, 0%, 100%, 0.11);
 }
 .vsv-social .social-list { display:flex; justify-content:center; align-items:center; gap:22px; padding:0; }
 .vsv-social .social-link { font-size:19px; color:#bdbdc1; transition:color .2s ease, transform .2s ease; }
@@ -2627,7 +2627,7 @@ body{
 
 .vsv-modern-hero{
   min-height:100svh;
-  padding:120px 24px 70px;
+  padding:20px 24px 70px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -2726,7 +2726,7 @@ body{
   border:0;
   background:transparent;
   color:#fff;
-  font-size:27px;
+  font-size:47px;
   cursor:pointer;
   animation:vsv-bounce 1.8s infinite;
 }
@@ -2754,7 +2754,7 @@ body{
 
 .vsv-section-heading>span{
   color:var(--vsv-gold);
-  font-size:9px;
+  font-size:13px;
   letter-spacing:.25em;
   font-weight:600;
 }
@@ -2850,7 +2850,7 @@ body{
 }
 
 .vsv-modern-content{
-  padding:40px 0 100px;
+  padding:40px 0 20px;
 }
 
 .vsv-content-inner{
@@ -2986,13 +2986,13 @@ body{
 .vsv-modern-hero{
   width:100%;
   min-height:100vh;
-  min-height:100svh;
+  min-height:80svh;
 }
 
 .vsv-services-section{
   width:min(1180px,calc(100% - 48px));
   margin:0 auto;
-  padding:120px 0 100px;
+  padding:20px 0 100px;
 }
 
 .vsv-modern-content{
