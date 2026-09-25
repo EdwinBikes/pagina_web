@@ -1,719 +1,713 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"><head><meta charset="utf-8"/><meta content="IE=edge" http-equiv="X-UA-Compatible"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Edwin Bikes | Visual Sky Verse</title><meta content="JdBmFTdHaRoHgJctZDfSfHOqnre3R6tvJYlYQGvGo8Y" name="google-site-verification"/><link href="./assets/images/logo.ico" rel="shortcut icon" type="image/x-icon"/><link href="./assets/css/style.css" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/><style id="visual-skyverse-reference-layout">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio - Edwin Bikes</title>
-  <meta name="google-site-verification" content="JdBmFTdHaRoHgJctZDfSfHOqnre3R6tvJYlYQGvGo8Y" />
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-\n<style id="visual-skyverse-service-modal">\n/* =========================================================\n   VISUAL SKY VERSE — Service shortcuts + modal system\n   Keeps the existing portfolio theme and only adds the new UI.\n   ========================================================= */\n.service-shortcuts{\n  display:grid;\n  grid-template-columns:repeat(2,minmax(0,1fr));\n  gap:8px;\n  margin:16px 0 8px;\n}\n.service-shortcut{\n  appearance:none;\n  border:1px solid rgba(255,255,255,.07);\n  background:#202023;\n  color:#d8d8dc;\n  border-radius:8px;\n  min-height:40px;\n  padding:7px 9px;\n  display:flex;\n  align-items:center;\n  justify-content:flex-start;\n  gap:8px;\n  font:500 10px/1.15 Poppins,sans-serif;\n  cursor:pointer;\n  transition:transform .2s ease,border-color .2s ease,background .2s ease,color .2s ease,box-shadow .2s ease;\n}\n.service-shortcut:hover,.service-shortcut:focus-visible{\n  transform:translateY(-2px);\n  background:#29292d;\n  color:#fff;\n  border-color:rgba(246,211,107,.55);\n  box-shadow:0 8px 22px rgba(0,0,0,.25);\n  outline:none;\n}\n.shortcut-icon{font-size:15px;line-height:1;flex:0 0 auto}\n.visitas-box{\n  text-align:center;\n  margin-top:10px;\n}\n.visitas-box .contact-title{margin-bottom:5px}\n.visitas-box img{\n  display:inline-block;\n  max-width:100%;\n  height:auto;\n  border-radius:4px;\n}\n.service-modal{\n  position:fixed;\n  inset:0;\n  z-index:9999;\n  display:flex;\n  align-items:center;\n  justify-content:center;\n  padding:22px;\n  visibility:hidden;\n  opacity:0;\n  pointer-events:none;\n  transition:opacity .25s ease,visibility .25s ease;\n}\n.service-modal.is-open{visibility:visible;opacity:1;pointer-events:auto}\n.service-modal-overlay{position:absolute;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(7px)}\n.service-modal-dialog{\n  position:relative;\n  z-index:1;\n  width:min(980px,100%);\n  max-height:min(88vh,900px);\n  overflow:auto;\n  background:#171719;\n  border:1px solid rgba(255,255,255,.09);\n  border-radius:18px;\n  box-shadow:0 30px 100px rgba(0,0,0,.65);\n  transform:translateY(24px) scale(.98);\n  transition:transform .28s ease;\n  scrollbar-width:thin;\n}\n.service-modal.is-open .service-modal-dialog{transform:none}\n.service-modal-close{\n  position:absolute;right:16px;top:14px;z-index:3;\n  width:38px;height:38px;border-radius:50%;\n  border:1px solid rgba(255,255,255,.09);\n  background:#232326;color:#fff;cursor:pointer;font-size:25px;line-height:1;\n}\n.service-modal-close:hover{background:#2e2e32;color:#f6d36b}\n.service-modal-header{padding:34px 38px 26px;border-bottom:1px solid rgba(255,255,255,.07)}\n.service-modal-kicker{display:inline-block;color:#f6d36b;font:600 9px/1.2 Poppins,sans-serif;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}\n.service-modal-header h2{font:600 30px/1.15 Poppins,sans-serif;color:#f4f4f5;margin:0 45px 8px 0}\n.service-modal-header p{color:#aaaab1;font:400 13px/1.7 Poppins,sans-serif;max-width:760px;margin:0}\n.service-modal-body{padding:28px 38px 36px}\n.service-modal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}\n.service-modal-card{background:#202023;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden}\n.service-modal-card img,.service-modal-card video{display:block;width:100%;height:190px;object-fit:cover;background:#0c0c0e}\n.service-modal-card .media-placeholder{height:190px;display:grid;place-items:center;padding:25px;text-align:center;color:#8f8f96;background:linear-gradient(145deg,#232327,#141416);font-size:11px;line-height:1.6}\n.service-modal-card-content{padding:14px 15px 16px}\n.service-modal-card-content small{display:block;color:#f6d36b;font-size:8px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:5px}\n.service-modal-card-content h3{font:600 16px/1.3 Poppins,sans-serif;color:#eee;margin:0 0 5px}\n.service-modal-card-content p{font:400 10px/1.65 Poppins,sans-serif;color:#96969d;margin:0}\n.service-modal-card-content a{display:inline-flex;margin-top:10px;color:#f6d36b;font-size:10px;font-weight:600}\n.service-modal-text{color:#b2b2b8;font:400 12px/1.8 Poppins,sans-serif;margin-bottom:20px}\n.service-modal-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}\n.service-modal-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}\n.service-modal-btn{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 15px;border-radius:8px;background:#252528;border:1px solid rgba(255,255,255,.08);color:#eee;font:600 10px Poppins,sans-serif}\n.service-modal-btn:hover{border-color:#f6d36b;color:#f6d36b}\n.service-modal-note{margin-top:20px;padding:13px 15px;border-left:2px solid #f6d36b;background:#202023;color:#909097;font:400 10px/1.7 Poppins,sans-serif}\nbody.service-modal-open{overflow:hidden}\n@media(max-width:900px){.service-modal-grid,.service-modal-projects{grid-template-columns:repeat(2,minmax(0,1fr))}}\n@media(max-width:650px){\n  .service-shortcuts{grid-template-columns:1fr 1fr}\n  .service-modal{padding:10px}\n  .service-modal-dialog{max-height:94vh;border-radius:14px}\n  .service-modal-header{padding:28px 20px 20px}\n  .service-modal-body{padding:20px}\n  .service-modal-grid,.service-modal-projects{grid-template-columns:1fr}\n  .service-modal-card img,.service-modal-card video,.service-modal-card .media-placeholder{height:210px}\n}\n</style>\n</head>
+html, body { min-height: 100%; }
+body { background: #0b0b0c; color: #d7d7db; }
 
-<body>
-  <main>
-    <aside class="sidebar" data-sidebar>
-      <div class="sidebar-info">
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Edwin Bikes" width="80">
-        </figure>
+/* One centered column, like the reference image. */
+main.vsv-main {
+  width: min(835px, calc(100% - 32px));
+  margin: 38px auto 70px;
+  display: block;
+}
 
-        <div class="info-content">
-          <h1 class="name" title="Edwin Bikes">Edwin Bikes</h1>
-        </div>
+/* The old sidebar becomes the centered profile header. */
+.vsv-profile {
+  width: 190px;
+  margin: 30px auto 12px;
+  padding: 20px 20px 16px;
+  background: #1c1c1f;
+  border: 1px solid #242428;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+}
+.vsv-profile .avatar-box {
+  width: 126px;
+  height: 126px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 27px;
+  background: linear-gradient(145deg,#3b3b3e,#29292c);
+}
+.vsv-profile .avatar-box img { width: 116px; height: 116px; object-fit: cover; border-radius: 23px; }
+.vsv-profile .name {
+  color: #f5f5f6;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0 0 8px;
+  letter-spacing: -.4px;
+}
+.vsv-profile .visitas-box { margin: 0; }
+.vsv-profile .visitas-box .contact-title {
+  color: #929298;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  margin-bottom: 4px;
+}
+.vsv-profile .visitas-box img { max-width: 100%; height: 18px; object-fit: contain; }
 
-        <div class="visitas-box">
-          <p class="contact-title">Visitas</p>
-          <a href="#" title="Contador de Visitas" aria-label="Contador de visitas">
-            <img src="https://counter9.stat.ovh/private/contadorvisitasgratis.php?c=gl2qd8pqsczl21ze7yauakf7f14ayhfl" alt="contador de visitas" border="0">
-          </a>
-        </div>
+/* Top navigation: centered, compact and rectangular like the reference. */
+.vsv-nav-wrap { display:flex; justify-content:center; }
+.vsv-nav {
+  position: static !important;
+  width: max-content !important;
+  max-width: 100%;
+  margin: 0 auto 30px;
+  padding: 0 10px !important;
+  background: #202023 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+.vsv-nav .navbar-list { gap: 0 !important; padding: 0 4px !important; flex-wrap: nowrap; }
+.vsv-nav .navbar-link {
+  padding: 8px 15px !important;
+  font-size: 13px !important;
+  font-weight: 500;
+  color: #cfcfd3;
+  white-space: nowrap;
+}
+.vsv-nav .navbar-link.active,
+.vsv-nav .navbar-link:hover { color: #f6d36b; }
 
-        <div class="service-shortcuts" aria-label="Especialidades de Edwin Bikes">
-          <button class="service-shortcut" type="button" data-service="community">
-            <span class="shortcut-icon">📱</span>
-            <span>Community Manager</span>
-          </button>
-          <button class="service-shortcut" type="button" data-service="developer">
-            <span class="shortcut-icon">💻</span>
-            <span>Desarrollador</span>
-          </button>
-          <button class="service-shortcut" type="button" data-service="fpv">
-            <span class="shortcut-icon">🚁</span>
-            <span>Piloto de Drone FPV</span>
-          </button>
-          <button class="service-shortcut" type="button" data-service="3d">
-            <span class="shortcut-icon">🖨️</span>
-            <span>Impresión 3D</span>
-          </button>
-        </div>
+/* Four service shortcuts directly under the profile. */
+.service-shortcuts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 14px;
+  margin: 0 0 25px;
+}
+.service-shortcut {
+  min-height: 36px;
+  border: 0;
+  border-radius: 0;
+  padding: 8px 12px;
+  background: #202023;
+  color: #d6d6da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font: 500 11px/1.2 Poppins,sans-serif;
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.service-shortcut:hover,
+.service-shortcut:focus-visible {
+  transform: translateY(-2px);
+  background: #29292c;
+  color: #f6d36b;
+  box-shadow: 0 10px 24px rgba(0,0,0,.25);
+  outline: none;
+}
+.shortcut-icon { display:none; }
 
-        <button class="info_more-btn" data-sidebar-btn type="button">
-          <span>Contáctame</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-      </div>
+/* Home content card exactly follows the visual language in the screenshot. */
+.vsv-content { width: 100%; }
+.vsv-content article[data-page] {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 14px 14px 22px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #1c1c1f !important;
+  box-shadow: none !important;
+}
+.vsv-content article[data-page].active { animation: vsvFade .45s ease both; }
+@keyframes vsvFade { from {opacity:0; transform:translateY(7px)} to {opacity:1; transform:none} }
+.vsv-content #acerca-de-mi .about-text {
+  color: #d2d2d5;
+  font-size: 14px;
+  line-height: 1.65;
+  font-weight: 300;
+  margin: 0;
+  padding-top: 4px;
+}
+.vsv-content #acerca-de-mi .about-text::before {
+  content: "";
+  display:block;
+  width: 38px;
+  height: 4px;
+  border-radius: 4px;
+  background: #f6d36b;
+  margin: 0 0 27px;
+}
+.vsv-content #acerca-de-mi .about-text p { margin: 0 0 17px; }
+.vsv-content #acerca-de-mi .about-text p:last-child { margin-bottom: 0; }
 
-      <div class="sidebar-info_more">
-        <div class="separator"></div>
+/* Contact strip below the home card, as in the reference. */
+.vsv-contact-strip {
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+  margin: 10px 38px 12px;
+}
+.vsv-contact-card {
+  min-width:0;
+  min-height: 42px;
+  padding: 7px 11px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  background:#202023;
+  border:1px solid #29292d;
+}
+.vsv-contact-card .icon-box { width:30px; height:30px; min-width:30px; border-radius:7px; }
+.vsv-contact-card .contact-info { width:auto; max-width:calc(100% - 39px); }
+.vsv-contact-card .contact-title { font-size:7px; margin-bottom:1px; }
+.vsv-contact-card .contact-link,
+.vsv-contact-card address { font-size:9px !important; color:#e4e4e7 !important; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.vsv-social {
+  width: 345px;
+  max-width: 100%;
+  min-height: 52px;
+  margin: 0 auto;
+  padding: 12px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#1c1c1f;
+  border:1px solid #26262a;
+}
+.vsv-social .social-list { display:flex; justify-content:center; align-items:center; gap:22px; padding:0; }
+.vsv-social .social-link { font-size:19px; color:#bdbdc1; transition:color .2s ease, transform .2s ease; }
+.vsv-social .social-link:hover { color:#f6d36b; transform:translateY(-2px); }
 
-        <ul class="contacts-list">
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a href="mailto:EdwinBykes@hotmail.com" class="contact-link">EdwinBykes@hotmail.com</a>
-            </div>
-          </li>
+/* Other navigation pages stay within the same centered shell. */
+.vsv-content article:not(#acerca-de-mi) { margin-top:0 !important; }
+.vsv-content article:not(#acerca-de-mi) .article-title { margin-top:0; }
 
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">WhatsApp</p>
-              <a href="tel:+573057135213" class="contact-link">+57 (305) 713-5213</a>
-            </div>
-          </li>
+/* Hide the old sidebar-only contact UI; contact info is rendered below the home card. */
+.vsv-profile .sidebar-info_more, .vsv-profile .info_more-btn { display:none !important; }
 
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Cumpleaños</p>
-              <time datetime="1992-12-20">Diciembre 20, 1992</time>
-            </div>
-          </li>
+/* Service modal */
+.service-modal{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:18px;visibility:hidden;opacity:0;pointer-events:none;transition:opacity .25s ease,visibility .25s ease}
+.service-modal.is-open{visibility:visible;opacity:1;pointer-events:auto}
+.service-modal-overlay{position:absolute;inset:0;background:rgba(0,0,0,.80);backdrop-filter:blur(8px)}
+.service-modal-dialog{position:relative;z-index:1;width:min(980px,100%);max-height:90vh;overflow:auto;background:#171719;border:1px solid #303035;border-radius:16px;box-shadow:0 30px 100px rgba(0,0,0,.65);transform:translateY(22px) scale(.98);transition:transform .28s ease}
+.service-modal.is-open .service-modal-dialog{transform:none}
+.service-modal-close{position:absolute;right:14px;top:12px;z-index:3;width:38px;height:38px;border-radius:50%;border:1px solid #37373b;background:#242427;color:#fff;cursor:pointer;font-size:25px;line-height:1}
+.service-modal-close:hover{color:#f6d36b}
+.service-modal-header{padding:30px 34px 23px;border-bottom:1px solid #2a2a2e}
+.service-modal-kicker{display:block;color:#f6d36b;font-size:8px;font-weight:600;letter-spacing:.16em;margin-bottom:8px}
+.service-modal-header h2{color:#f4f4f5;font-size:26px;margin:0 42px 7px}
+.service-modal-header p{color:#a9a9af;font-size:12px;line-height:1.7;max-width:760px;margin:0}
+.service-modal-body{padding:25px 34px 32px}
+.service-modal-grid,.service-modal-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.service-modal-card{background:#202023;border:1px solid #2b2b2f;border-radius:10px;overflow:hidden}
+.service-modal-card img,.service-modal-card video{display:block;width:100%;height:190px;object-fit:cover;background:#0b0b0c}
+.service-modal-card-content{padding:13px 14px 15px}
+.service-modal-card-content small{display:block;color:#f6d36b;font-size:7px;letter-spacing:.14em;margin-bottom:4px}
+.service-modal-card-content h3{color:#eee;font-size:15px;margin:0 0 5px}
+.service-modal-card-content p{color:#99999f;font-size:10px;line-height:1.6;margin:0}
+.service-modal-card-content a{display:inline-flex;margin-top:9px;color:#f6d36b;font-size:9px;font-weight:600}
+.service-modal-text{color:#b5b5ba;font-size:11px;line-height:1.75;margin:0 0 18px}
+.service-modal-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.service-modal-btn{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 14px;border-radius:7px;background:#252528;border:1px solid #333338;color:#eee;font-size:9px;font-weight:600}
+.service-modal-btn:hover{border-color:#f6d36b;color:#f6d36b}
+.service-modal-note{margin-top:18px;padding:12px 14px;border-left:2px solid #f6d36b;background:#202023;color:#909096;font-size:9px;line-height:1.7}
+body.service-modal-open{overflow:hidden}
 
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Ubicación</p>
-              <address>Bogotá, Colombia</address>
-            </div>
-          </li>
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="https://github.com/EdwinBikes" target="_blank" class="social-link" rel="noreferrer">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/edwin-gutierrez57/" target="_blank" class="social-link" rel="noreferrer">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://www.instagram.com/edwinbikes/" target="_blank" class="social-link" rel="noreferrer">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://www.youtube.com/channel/UC0YYLINtrwuwzMMN-SetBLA" target="_blank" class="social-link" rel="noreferrer">
-              <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </aside>
-
-    <div class="main-content">
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link="acerca-de-mi" type="button">Acerca de mi</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="resumen" type="button">Resumen</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="portafolio" type="button">Portafolio</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="blog" type="button">Blog</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="contactame" type="button">Contáctame</button>
-          </li>
-        </ul>
-      </nav>
-
-      <article id="acerca-de-mi" class="acerca-de-mi active" data-page="acerca-de-mi">
-        <header>
-          <h2 class="h2 article-title">Acerca de</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
+@media(max-width:700px){
+  main.vsv-main{width:min(100% - 20px,835px);margin-top:18px}
+  .vsv-nav{width:100% !important;overflow-x:auto}
+  .vsv-nav .navbar-list{justify-content:center;min-width:max-content}
+  .vsv-nav .navbar-link{padding:8px 10px !important;font-size:10px !important}
+  .service-shortcuts{grid-template-columns:1fr 1fr;gap:8px}
+  .vsv-contact-strip{grid-template-columns:1fr;margin:10px 0 12px;gap:8px}
+  .vsv-social{width:100%}
+  .vsv-content #acerca-de-mi .about-text{font-size:12px}
+  .service-modal{padding:8px}
+  .service-modal-header{padding:25px 20px 18px}
+  .service-modal-body{padding:20px}
+  .service-modal-grid,.service-modal-projects{grid-template-columns:1fr}
+}
+</style></head><body><main class="vsv-main"><aside class="vsv-profile"><div class="sidebar-info"><figure class="avatar-box"><img alt="Edwin Bikes" src="./assets/images/my-avatar.png" width="80"/></figure><div class="info-content"><h1 class="name" title="Edwin Bikes">Edwin Bikes</h1></div><div class="visitas-box"><p class="contact-title">Visitas</p><a aria_label="Contador de visitas" href="#" title="Contador de Visitas"><img alt="contador de visitas" border="0" src="https://counter9.stat.ovh/private/contadorvisitasgratis.php?c=gl2qd8pqsczl21ze7yauakf7f14ayhfl"/></a></div></div></aside><div class="vsv-nav-wrap"><nav class="navbar vsv-nav"><ul class="navbar-list"><li class="navbar-item"><button class="navbar-link active" data-nav-link="acerca-de-mi" type="button">Acerca de mi</button></li><li class="navbar-item"><button class="navbar-link" data-nav-link="resumen" type="button">Resumen</button></li><li class="navbar-item"><button class="navbar-link" data-nav-link="portafolio" type="button">Portafolio</button></li><li class="navbar-item"><button class="navbar-link" data-nav-link="blog" type="button">Blog</button></li><li class="navbar-item"><button class="navbar-link" data-nav-link="contactame" type="button">Contáctame</button></li></ul></nav></div><div aria-label="Especialidades de Edwin Bikes" class="service-shortcuts"><button class="service-shortcut" data-service="community" type="button"><span class="shortcut-icon">📱</span><span>Community Manager</span></button><button class="service-shortcut" data-service="developer" type="button"><span class="shortcut-icon">💻</span><span>Desarrollador</span></button><button class="service-shortcut" data-service="fpv" type="button"><span class="shortcut-icon">🚁</span><span>Piloto de Drone FPV</span></button><button class="service-shortcut" data-service="3d" type="button"><span class="shortcut-icon">🖨️</span><span>Impresión 3D</span></button></div><div class="vsv-content"><article class="acerca-de-mi active" data-page="acerca-de-mi" id="acerca-de-mi"><section class="about-text">
+<p>
             Soy productor de video especializado como piloto de drones FPV y fundador de Visual Sky Verse, empresa de producción audiovisual.
           </p>
-          <p>
+<p>
             Con más de dos años de experiencia, he tenido el privilegio de trabajar en una amplia variedad de proyectos, que incluyen anuncios publicitarios, videos corporativos y promocionales diseñados con la mejor calidad.
           </p>
-          <p>
+<p>
             Además de mi experiencia en producción y edición de video, también he desarrollado habilidades en el ámbito del desarrollo móvil. Disfruto creando aplicaciones útiles y atractivas, combinando funcionalidad con una experiencia intuitiva.
           </p>
-          <p>
+<p>
             Si busca un productor de video con experiencia o un desarrollador móvil comprometido, no dude en contactarme. Mi objetivo es ofrecer un servicio de alta calidad y ayudarle a alcanzar sus metas comerciales.
           </p>
-        </section>
-
-        <section class="service">
-          <h3 class="h3 service-title">Qué hago ahora?</h3>
-          <ul class="service-list">
-            <li class="service-item" data-open-section="portafolio">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Diseños</h4>
-                <p class="service-item-text">Diseños modernos y de alta calidad hechos a nivel profesional.</p>
-              </div>
-            </li>
-
-            <li class="service-item" data-open-section="resumen">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Experiencia</h4>
-                <p class="service-item-text">Mi vida profesional.</p>
-              </div>
-            </li>
-
-            <li class="service-item" data-open-section="portafolio">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-              <div class="service-content-box" id="elboton">
-                <h4 class="h4 service-item-title">Apps Móviles</h4>
-                <p class="service-item-text">Desarrollo de aplicaciones para iOS y Android con Flutter de Dart.</p>
-              </div>
-            </li>
-
-            <li class="service-item" data-open-section="blog">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Video Drones FPV</h4>
-                <p class="service-item-text">Realizo videos y fotografía con drones FPV de forma recreativa y profesional.</p>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <section class="testimonials">
-          <h3 class="h3 testimonials-title">Testimonios</h3>
-          <ul class="testimonials-list has-scrollbar">
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Oscar Gutierrez" width="60" data-testimonials-avatar>
-                </figure>
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Oscar Gutierrez</h4>
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>Edwin es una persona muy enfocada en sus actividades y responsabilidades asignadas, es muy placentero el entorno laboral con él.</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Yir Orozco" width="60" data-testimonials-avatar>
-                </figure>
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Yir Orozco</h4>
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>Estoy muy contenta con los resultados obtenidos, por los servicios contratados para la realización de un video en nuestro ecoparque, ya que superaron todas nuestras expectativas.</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Carolina Sabogal" width="60" data-testimonials-avatar>
-                </figure>
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Carolina Sabogal</h4>
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>Edwin es una persona muy receptiva, es muy apasionado en su trabajo, siempre quiere superarse y estar aprendiendo muchas cosas; tiene la capacidad de solventar y poder solucionar los problemas, es muy receptivo a los cambios y mantiene un buen ambiente de trabajo.</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Nicolás Contreras" width="60" data-testimonials-avatar>
-                </figure>
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Nicolás Contreras</h4>
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>Edwin realizó un trabajo fenomenal creando bases de datos automatizadas, con las cuales tenemos control de todos nuestros procesos del día a día, mejorando el tiempo de respuesta y la producción significativamente.</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <div class="modal-container" data-modal-container>
-          <div class="overlay" data-overlay></div>
-          <section class="testimonials-modal">
-            <button class="modal-close-btn" data-modal-close-btn type="button">
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-              <h4 class="h3 modal-title" data-modal-title>Camilo Espitia</h4>
-              <time datetime="2021-06-14">14 June, 2021</time>
-              <div data-modal-text>
-                <p>Edwin was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of the client.</p>
-              </div>
-            </div>
-          </section>
-        </div>
-      </article>
-
-      <article id="resumen" class="resumen" data-page="resumen">
-        <header>
-          <h2 class="h2 article-title">Resumen</h2>
-        </header>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Estudios</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Udemy</h4>
-              <span>2023 — 2023</span>
-              <p class="timeline-text">Flutter de cero a experto 2023 - Fernando Herrera. Riverpod, API, Bloc, GoRouter.</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Colsubsidio</h4>
-              <span>2022 — 2022</span>
-              <p class="timeline-text">CSS - HTML</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Certiprof</h4>
-              <span>2022 — 2022</span>
-              <p class="timeline-text">Scrum Master</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Udemy</h4>
-              <span>2022 — 2022</span>
-              <p class="timeline-text">JavaScript</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Platzi</h4>
-              <span>2021 — 2022</span>
-              <p class="timeline-text">Dart de Google</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Código Facilito</h4>
-              <span>2021 — 2022</span>
-              <p class="timeline-text">Introducción Flutter SDK de Google</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">SENA</h4>
-              <span>2018 — 2018</span>
-              <p class="timeline-text">Excel - VBA</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">SENA</h4>
-              <span>2015 — 2016</span>
-              <p class="timeline-text">Seguridad y salud en el trabajo (SST)</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Juan Bosco Obrero</h4>
-              <span>2013 — 2014</span>
-              <p class="timeline-text">Electricidad y electrónica automotriz</p>
-            </li>
-          </ol>
-        </section>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Experiencia</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Freelance</h4>
-              <p class="timeline-text">Mi empresa y marca Edwinbikes</p>
-              <span>2022 — Presente</span>
-              <p class="timeline-text">
-                <br>- Piloto de drones FPV para inmobiliarias.
-                <br>- Diseño de gráficos y animaciones en Blender.
-                <br>- Edición de video y colorización en DaVinci Resolve.
-                <br>- Creación de aplicaciones móviles start-up.
-                <br>- Publicidad en redes sociales o plataformas de ventas.
+</section></article><article class="resumen" data-page="resumen" id="resumen">
+<header>
+<h2 class="h2 article-title">Resumen</h2>
+</header>
+<section class="timeline">
+<div class="title-wrapper">
+<div class="icon-box">
+<ion-icon name="book-outline"></ion-icon>
+</div>
+<h3 class="h3">Estudios</h3>
+</div>
+<ol class="timeline-list">
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Udemy</h4>
+<span>2023 — 2023</span>
+<p class="timeline-text">Flutter de cero a experto 2023 - Fernando Herrera. Riverpod, API, Bloc, GoRouter.</p>
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Colsubsidio</h4>
+<span>2022 — 2022</span>
+<p class="timeline-text">CSS - HTML</p>
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Certiprof</h4>
+<span>2022 — 2022</span>
+<p class="timeline-text">Scrum Master</p>
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Udemy</h4>
+<span>2022 — 2022</span>
+<p class="timeline-text">JavaScript</p>
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Platzi</h4>
+<span>2021 — 2022</span>
+<p class="timeline-text">Dart de Google</p>
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Código Facilito</h4>
+<span>2021 — 2022</span>
+<p class="timeline-text">Introducción Flutter SDK de Google</p>
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">SENA</h4>
+<span>2018 — 2018</span>
+<p class="timeline-text">Excel - VBA</p>
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">SENA</h4>
+<span>2015 — 2016</span>
+<p class="timeline-text">Seguridad y salud en el trabajo (SST)</p>
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Juan Bosco Obrero</h4>
+<span>2013 — 2014</span>
+<p class="timeline-text">Electricidad y electrónica automotriz</p>
+</li>
+</ol>
+</section>
+<section class="timeline">
+<div class="title-wrapper">
+<div class="icon-box">
+<ion-icon name="book-outline"></ion-icon>
+</div>
+<h3 class="h3">Experiencia</h3>
+</div>
+<ol class="timeline-list">
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Freelance</h4>
+<p class="timeline-text">Mi empresa y marca Edwinbikes</p>
+<span>2022 — Presente</span>
+<p class="timeline-text">
+<br/>- Piloto de drones FPV para inmobiliarias.
+                <br/>- Diseño de gráficos y animaciones en Blender.
+                <br/>- Edición de video y colorización en DaVinci Resolve.
+                <br/>- Creación de aplicaciones móviles start-up.
+                <br/>- Publicidad en redes sociales o plataformas de ventas.
               </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Analista de riesgos y peligros</h4>
-              <p class="timeline-text">General Motors Colmotores</p>
-              <span>2017 — 2022</span>
-              <p class="timeline-text">
-                <br>- Análisis y gestión de riesgos en áreas de automóviles y camiones.
-                <br>- Gestión de nuevos proyectos para cumplimiento de seguridad y ergonomía.
-                <br>- Automatización de reportes y creación de dashboard con VBA para optimizar tiempos.
-                <br>- Integración de herramientas para consolidar información y riesgos.
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Analista de riesgos y peligros</h4>
+<p class="timeline-text">General Motors Colmotores</p>
+<span>2017 — 2022</span>
+<p class="timeline-text">
+<br/>- Análisis y gestión de riesgos en áreas de automóviles y camiones.
+                <br/>- Gestión de nuevos proyectos para cumplimiento de seguridad y ergonomía.
+                <br/>- Automatización de reportes y creación de dashboard con VBA para optimizar tiempos.
+                <br/>- Integración de herramientas para consolidar información y riesgos.
               </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Operario General</h4>
-              <p class="timeline-text">General Motors Colmotores</p>
-              <span>2014 — 2017</span>
-              <p class="timeline-text">
-                <br>- Ensamble de autopartes para vehículos pesados, livianos y automóviles.
-                <br>- Desarrollo de trabajo estandarizado.
-                <br>- Optimización de procesos y control de calidad.
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Operario General</h4>
+<p class="timeline-text">General Motors Colmotores</p>
+<span>2014 — 2017</span>
+<p class="timeline-text">
+<br/>- Ensamble de autopartes para vehículos pesados, livianos y automóviles.
+                <br/>- Desarrollo de trabajo estandarizado.
+                <br/>- Optimización de procesos y control de calidad.
               </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Jefe de taller automotriz</h4>
-              <p class="timeline-text">House Motors</p>
-              <span>2016 — 2019</span>
-              <p class="timeline-text">
-                <br>- Mantenimiento físico y mecánico de vehículos.
-                <br>- Asesoría en venta de refacciones.
-                <br>- Manejo de personal y coordinación del taller.
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Jefe de taller automotriz</h4>
+<p class="timeline-text">House Motors</p>
+<span>2016 — 2019</span>
+<p class="timeline-text">
+<br/>- Mantenimiento físico y mecánico de vehículos.
+                <br/>- Asesoría en venta de refacciones.
+                <br/>- Manejo de personal y coordinación del taller.
               </p>
-            </li>
-          </ol>
-        </section>
-
-        <section class="skill">
-          <h3 class="h3 skills-title">Mis habilidades</h3>
-          <ul class="skills-list content-card">
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">HTML (junior)</h5>
-                <data value="99"></data>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">CSS (junior)</h5>
-                <data value="99"></data>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">JavaScript (junior)</h5>
-                <data value="40"></data>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Dart (junior)</h5>
-                <data value="60"></data>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Flutter (junior)</h5>
-                <data value="60"></data>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">VBA - Excel (semi - senior)</h5>
-                <data value="80"></data>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Pilot Drone FPV (senior)</h5>
-                <data value="10"></data>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </article>
-
-      <article id="portafolio" class="portafolio" data-page="portafolio">
-        <header>
-          <h2 class="h2 article-title">Portafolio</h2>
-        </header>
-
-        <section class="projects">
-          <ul class="filter-list">
-            <li class="filter-item">
-              <button class="active" data-filter-btn type="button">All</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn type="button">Diseños Web</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn type="button">Aplicaciones</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn type="button">Desarrollos Web</button>
-            </li>
-          </ul>
-
-          <div class="filter-select-box">
-            <button class="filter-select" data-select type="button">
-              <div class="select-value" data-selecct-value>Seleccionar categorías</div>
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-            </button>
-
-            <ul class="select-list">
-              <li class="select-item"><button data-select-item type="button">all</button></li>
-              <li class="select-item"><button data-select-item type="button">diseños web</button></li>
-              <li class="select-item"><button data-select-item type="button">aplicaciones</button></li>
-              <li class="select-item"><button data-select-item type="button">desarrollos web</button></li>
-            </ul>
-          </div>
-
-          <ul class="project-list">
-            <li class="project-item active" data-filter-item data-category="aplicaciones">
-              <a href="https://github.com/EdwinBikes/house_motors" target="_blank" rel="noreferrer">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/videos/gif.gif" alt="Blog" loading="lazy">
-                </figure>
-                <h3 class="project-title">App widgets Examples</h3>
-                <p class="project-category">App android</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="aplicaciones">
-              <a href="https://github.com/EdwinBikes/house_motors" target="_blank" rel="noreferrer">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-1.jpg" alt="Blog" loading="lazy">
-                </figure>
-                <h3 class="project-title">Blog de super autos</h3>
-                <p class="project-category">App android</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="aplicaciones">
-              <a href="https://github.com/EdwinBikes/cine_app" target="_blank" rel="noreferrer">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-2.png" alt="Movie" loading="lazy">
-                </figure>
-                <h3 class="project-title">App cinebikes</h3>
-                <p class="project-category">App</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="diseños web">
-              <a href="https://portfolio-edwinbikes.vercel.app/" target="_blank" rel="noreferrer">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-3.jpg" alt="Diseño web" loading="lazy">
-                </figure>
-                <h3 class="project-title">Portafolio Edwin Bikes</h3>
-                <p class="project-category">Diseño web</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="aplicaciones">
-              <a href="https://github.com/EdwinBikes/clone_netflix" target="_blank" rel="noreferrer">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-4.png" alt="Clone de Netflix" loading="lazy">
-                </figure>
-                <h3 class="project-title">Clone de Netflix</h3>
-                <p class="project-category">App</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="aplicaciones">
-              <a href="https://github.com/EdwinBikes/flutter/tree/main/musica_app" target="_blank" rel="noreferrer">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="App música" loading="lazy">
-                </figure>
-                <h3 class="project-title">App Edwin Música</h3>
-                <p class="project-category">App</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="desarrollos web">
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-                <h3 class="project-title">Summary</h3>
-                <p class="project-category">Web development</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="desarrollos web">
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-                <h3 class="project-title">Arrival</h3>
-                <p class="project-category">Web development</p>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </article>
-
-      <article id="blog" class="blog" data-page="blog">
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-          <ul class="blog-posts-list">
-            <li class="blog-post-item">
-              <a href="https://youtube.com/playlist?list=PLllYEQQooZSYgctQ5e1r3-467F3_5S8FN" target="_blank" rel="noreferrer">
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/playlist.png" alt="video de drone FPV" loading="lazy">
-                </figure>
-                <div class="blog-content">
-                  <div class="blog-meta">
-                    <p class="blog-category">PlayList</p>
-                    <span class="dot"></span>
-                    <time datetime="2023-02-23">Jun 27, 2023</time>
-                  </div>
-                  <h3 class="h3 blog-item-title">Playlist de mi canal de YouTube</h3>
-                  <p class="blog-text">Playlist de mis videos realizados hasta la fecha, con música de fondo para ver o escuchar.</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://youtu.be/rwH63_cO9U" target="_blank" rel="noreferrer">
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="video de drone FPV" loading="lazy">
-                </figure>
-                <div class="blog-content">
-                  <div class="blog-meta">
-                    <p class="blog-category">Videos</p>
-                    <span class="dot"></span>
-                    <time datetime="2021-09-27">Sep 27, 2021</time>
-                  </div>
-                  <h3 class="h3 blog-item-title">Salida a pescar en Cundinamarca</h3>
-                  <p class="blog-text">Video grabado con dron FPV, en el ecoparque de Chinátá, con una vista aérea y movimiento envolvente.</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://youtu.be/ZC6sT0v6_8c" target="_blank" rel="noreferrer">
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="video drone" loading="lazy">
-                </figure>
-                <div class="blog-content">
-                  <div class="blog-meta">
-                    <p class="blog-category">Videos</p>
-                    <span class="dot"></span>
-                    <time datetime="2021-11-14">Nov 14, 2021</time>
-                  </div>
-                  <h3 class="h3 blog-item-title">Renault 9 con drone FPV</h3>
-                  <p class="blog-text">Video con cámara insta 360, drone FPV en la avenida ALI en Soacha Cundinamarca.</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </article>
-
-      <article id="contactame" class="contactame" data-page="contactame">
-        <header>
-          <h2 class="h2 article-title">Contáctame</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.17429160192!2d-74.1364782!3d4.651515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a7f8d5d0d1d%3A0x5e4b6d3d8f3d4b2b!2sBogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sco!4v1620000000000!5m2!1ses!2sco" width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-          <h3 class="h3 form-title">Envíame un mensaje</h3>
-          <form action="#" class="form" data-form>
-            <div class="input-wrapper">
-              <input type="text" name="full_name" class="form-input" placeholder="Escribe tu nombre" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Ingresa tu correo" required data-form-input>
-            </div>
-            <textarea name="message" class="form-input" placeholder="Escribe aquí tu mensaje" required data-form-input></textarea>
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Enviar mensaje</span>
-            </button>
-          </form>
-        </section>
-      </article>
-    </div>
-  </main>
-
-  <!-- Service detail modal -->
-  <div class="service-modal" id="serviceModal" aria-hidden="true">
-    <div class="service-modal-overlay" data-service-close></div>
-    <section class="service-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="serviceModalTitle">
-      <button class="service-modal-close" type="button" data-service-close aria-label="Cerrar">&times;</button>
-      <div class="service-modal-header">
-        <span class="service-modal-kicker" id="serviceModalKicker">ESPECIALIDAD</span>
-        <h2 id="serviceModalTitle">Servicio</h2>
-        <p id="serviceModalIntro"></p>
+</li>
+</ol>
+</section>
+<section class="skill">
+<h3 class="h3 skills-title">Mis habilidades</h3>
+<ul class="skills-list content-card">
+<li class="skills-item">
+<div class="title-wrapper">
+<h5 class="h5">HTML (junior)</h5>
+<data value="99"></data>
+</div>
+</li>
+<li class="skills-item">
+<div class="title-wrapper">
+<h5 class="h5">CSS (junior)</h5>
+<data value="99"></data>
+</div>
+</li>
+<li class="skills-item">
+<div class="title-wrapper">
+<h5 class="h5">JavaScript (junior)</h5>
+<data value="40"></data>
+</div>
+</li>
+<li class="skills-item">
+<div class="title-wrapper">
+<h5 class="h5">Dart (junior)</h5>
+<data value="60"></data>
+</div>
+</li>
+<li class="skills-item">
+<div class="title-wrapper">
+<h5 class="h5">Flutter (junior)</h5>
+<data value="60"></data>
+</div>
+</li>
+<li class="skills-item">
+<div class="title-wrapper">
+<h5 class="h5">VBA - Excel (semi - senior)</h5>
+<data value="80"></data>
+</div>
+</li>
+<li class="skills-item">
+<div class="title-wrapper">
+<h5 class="h5">Pilot Drone FPV (senior)</h5>
+<data value="10"></data>
+</div>
+</li>
+</ul>
+</section>
+</article><article class="portafolio" data-page="portafolio" id="portafolio">
+<header>
+<h2 class="h2 article-title">Portafolio</h2>
+</header>
+<section class="projects">
+<ul class="filter-list">
+<li class="filter-item">
+<button class="active" data-filter-btn="" type="button">All</button>
+</li>
+<li class="filter-item">
+<button data-filter-btn="" type="button">Diseños Web</button>
+</li>
+<li class="filter-item">
+<button data-filter-btn="" type="button">Aplicaciones</button>
+</li>
+<li class="filter-item">
+<button data-filter-btn="" type="button">Desarrollos Web</button>
+</li>
+</ul>
+<div class="filter-select-box">
+<button class="filter-select" data-select="" type="button">
+<div class="select-value" data-selecct-value="">Seleccionar categorías</div>
+<div class="select-icon">
+<ion-icon name="chevron-down"></ion-icon>
+</div>
+</button>
+<ul class="select-list">
+<li class="select-item"><button data-select-item="" type="button">all</button></li>
+<li class="select-item"><button data-select-item="" type="button">diseños web</button></li>
+<li class="select-item"><button data-select-item="" type="button">aplicaciones</button></li>
+<li class="select-item"><button data-select-item="" type="button">desarrollos web</button></li>
+</ul>
+</div>
+<ul class="project-list">
+<li class="project-item active" data-category="aplicaciones" data-filter-item="">
+<a href="https://github.com/EdwinBikes/house_motors" rel="noreferrer" target="_blank">
+<figure class="project-img">
+<div class="project-item-icon-box">
+<ion-icon name="eye-outline"></ion-icon>
+</div>
+<img alt="Blog" loading="lazy" src="./assets/images/videos/gif.gif"/>
+</figure>
+<h3 class="project-title">App widgets Examples</h3>
+<p class="project-category">App android</p>
+</a>
+</li>
+<li class="project-item active" data-category="aplicaciones" data-filter-item="">
+<a href="https://github.com/EdwinBikes/house_motors" rel="noreferrer" target="_blank">
+<figure class="project-img">
+<div class="project-item-icon-box">
+<ion-icon name="eye-outline"></ion-icon>
+</div>
+<img alt="Blog" loading="lazy" src="./assets/images/project-1.jpg"/>
+</figure>
+<h3 class="project-title">Blog de super autos</h3>
+<p class="project-category">App android</p>
+</a>
+</li>
+<li class="project-item active" data-category="aplicaciones" data-filter-item="">
+<a href="https://github.com/EdwinBikes/cine_app" rel="noreferrer" target="_blank">
+<figure class="project-img">
+<div class="project-item-icon-box">
+<ion-icon name="eye-outline"></ion-icon>
+</div>
+<img alt="Movie" loading="lazy" src="./assets/images/project-2.png"/>
+</figure>
+<h3 class="project-title">App cinebikes</h3>
+<p class="project-category">App</p>
+</a>
+</li>
+<li class="project-item active" data-category="diseños web" data-filter-item="">
+<a href="https://portfolio-edwinbikes.vercel.app/" rel="noreferrer" target="_blank">
+<figure class="project-img">
+<div class="project-item-icon-box">
+<ion-icon name="eye-outline"></ion-icon>
+</div>
+<img alt="Diseño web" loading="lazy" src="./assets/images/project-3.jpg"/>
+</figure>
+<h3 class="project-title">Portafolio Edwin Bikes</h3>
+<p class="project-category">Diseño web</p>
+</a>
+</li>
+<li class="project-item active" data-category="aplicaciones" data-filter-item="">
+<a href="https://github.com/EdwinBikes/clone_netflix" rel="noreferrer" target="_blank">
+<figure class="project-img">
+<div class="project-item-icon-box">
+<ion-icon name="eye-outline"></ion-icon>
+</div>
+<img alt="Clone de Netflix" loading="lazy" src="./assets/images/project-4.png"/>
+</figure>
+<h3 class="project-title">Clone de Netflix</h3>
+<p class="project-category">App</p>
+</a>
+</li>
+<li class="project-item active" data-category="aplicaciones" data-filter-item="">
+<a href="https://github.com/EdwinBikes/flutter/tree/main/musica_app" rel="noreferrer" target="_blank">
+<figure class="project-img">
+<div class="project-item-icon-box">
+<ion-icon name="eye-outline"></ion-icon>
+</div>
+<img alt="App música" loading="lazy" src="./assets/images/project-5.png"/>
+</figure>
+<h3 class="project-title">App Edwin Música</h3>
+<p class="project-category">App</p>
+</a>
+</li>
+<li class="project-item active" data-category="desarrollos web" data-filter-item="">
+<a href="#">
+<figure class="project-img">
+<div class="project-item-icon-box">
+<ion-icon name="eye-outline"></ion-icon>
+</div>
+<img alt="summary" loading="lazy" src="./assets/images/project-7.png"/>
+</figure>
+<h3 class="project-title">Summary</h3>
+<p class="project-category">Web development</p>
+</a>
+</li>
+<li class="project-item active" data-category="desarrollos web" data-filter-item="">
+<a href="#">
+<figure class="project-img">
+<div class="project-item-icon-box">
+<ion-icon name="eye-outline"></ion-icon>
+</div>
+<img alt="arrival" loading="lazy" src="./assets/images/project-9.png"/>
+</figure>
+<h3 class="project-title">Arrival</h3>
+<p class="project-category">Web development</p>
+</a>
+</li>
+</ul>
+</section>
+</article><article class="blog" data-page="blog" id="blog">
+<header>
+<h2 class="h2 article-title">Blog</h2>
+</header>
+<section class="blog-posts">
+<ul class="blog-posts-list">
+<li class="blog-post-item">
+<a href="https://youtube.com/playlist?list=PLllYEQQooZSYgctQ5e1r3-467F3_5S8FN" rel="noreferrer" target="_blank">
+<figure class="blog-banner-box">
+<img alt="video de drone FPV" loading="lazy" src="./assets/images/playlist.png"/>
+</figure>
+<div class="blog-content">
+<div class="blog-meta">
+<p class="blog-category">PlayList</p>
+<span class="dot"></span>
+<time datetime="2023-02-23">Jun 27, 2023</time>
+</div>
+<h3 class="h3 blog-item-title">Playlist de mi canal de YouTube</h3>
+<p class="blog-text">Playlist de mis videos realizados hasta la fecha, con música de fondo para ver o escuchar.</p>
+</div>
+</a>
+</li>
+<li class="blog-post-item">
+<a href="https://youtu.be/rwH63_cO9U" rel="noreferrer" target="_blank">
+<figure class="blog-banner-box">
+<img alt="video de drone FPV" loading="lazy" src="./assets/images/blog-1.jpg"/>
+</figure>
+<div class="blog-content">
+<div class="blog-meta">
+<p class="blog-category">Videos</p>
+<span class="dot"></span>
+<time datetime="2021-09-27">Sep 27, 2021</time>
+</div>
+<h3 class="h3 blog-item-title">Salida a pescar en Cundinamarca</h3>
+<p class="blog-text">Video grabado con dron FPV, en el ecoparque de Chinátá, con una vista aérea y movimiento envolvente.</p>
+</div>
+</a>
+</li>
+<li class="blog-post-item">
+<a href="https://youtu.be/ZC6sT0v6_8c" rel="noreferrer" target="_blank">
+<figure class="blog-banner-box">
+<img alt="video drone" loading="lazy" src="./assets/images/blog-2.jpg"/>
+</figure>
+<div class="blog-content">
+<div class="blog-meta">
+<p class="blog-category">Videos</p>
+<span class="dot"></span>
+<time datetime="2021-11-14">Nov 14, 2021</time>
+</div>
+<h3 class="h3 blog-item-title">Renault 9 con drone FPV</h3>
+<p class="blog-text">Video con cámara insta 360, drone FPV en la avenida ALI en Soacha Cundinamarca.</p>
+</div>
+</a>
+</li>
+</ul>
+</section>
+</article><article class="contactame" data-page="contactame" id="contactame">
+<header>
+<h2 class="h2 article-title">Contáctame</h2>
+</header>
+<section class="mapbox" data-mapbox="">
+<figure>
+<iframe height="300" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.17429160192!2d-74.1364782!3d4.651515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a7f8d5d0d1d%3A0x5e4b6d3d8f3d4b2b!2sBogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sco!4v1620000000000!5m2!1ses!2sco" width="400"></iframe>
+</figure>
+</section>
+<section class="contact-form">
+<h3 class="h3 form-title">Envíame un mensaje</h3>
+<form action="#" class="form" data-form="">
+<div class="input-wrapper">
+<input class="form-input" data-form-input="" name="full_name" placeholder="Escribe tu nombre" required="" type="text"/>
+<input class="form-input" data-form-input="" name="email" placeholder="Ingresa tu correo" required="" type="email"/>
+</div>
+<textarea class="form-input" data-form-input="" name="message" placeholder="Escribe aquí tu mensaje" required=""></textarea>
+<button class="form-btn" data-form-btn="" disabled="" type="submit">
+<ion-icon name="paper-plane"></ion-icon>
+<span>Enviar mensaje</span>
+</button>
+</form>
+</section>
+</article></div><div class="vsv-contact-strip"><li class="contact-item">
+<div class="icon-box">
+<ion-icon name="mail-outline"></ion-icon>
+</div>
+<div class="contact-info">
+<p class="contact-title">Email</p>
+<a class="contact-link" href="mailto:EdwinBykes@hotmail.com">EdwinBykes@hotmail.com</a>
+</div>
+</li><li class="contact-item">
+<div class="icon-box">
+<ion-icon name="phone-portrait-outline"></ion-icon>
+</div>
+<div class="contact-info">
+<p class="contact-title">WhatsApp</p>
+<a class="contact-link" href="tel:+573057135213">+57 (305) 713-5213</a>
+</div>
+</li></div><div class="vsv-social"><ul class="social-list"><li class="social-item">
+<a class="social-link" href="https://github.com/EdwinBikes" rel="noreferrer" target="_blank">
+<ion-icon name="logo-github"></ion-icon>
+</a>
+</li><li class="social-item">
+<a class="social-link" href="https://www.linkedin.com/in/edwin-gutierrez57/" rel="noreferrer" target="_blank">
+<ion-icon name="logo-linkedin"></ion-icon>
+</a>
+</li><li class="social-item">
+<a class="social-link" href="https://www.instagram.com/edwinbikes/" rel="noreferrer" target="_blank">
+<ion-icon name="logo-instagram"></ion-icon>
+</a>
+</li><li class="social-item">
+<a class="social-link" href="https://www.youtube.com/channel/UC0YYLINtrwuwzMMN-SetBLA" rel="noreferrer" target="_blank">
+<ion-icon name="logo-youtube"></ion-icon>
+</a>
+</li></ul></div></main>
+<div aria-hidden="true" class="service-modal" id="serviceModal">
+<div class="service-modal-overlay" data-service-close=""></div>
+<section aria-labelledby="serviceModalTitle" aria-modal="true" class="service-modal-dialog" role="dialog">
+<button aria-label="Cerrar" class="service-modal-close" data-service-close="" type="button">×</button>
+<div class="service-modal-header">
+<span class="service-modal-kicker" id="serviceModalKicker">ESPECIALIDAD</span>
+<h2 id="serviceModalTitle">Servicio</h2>
+<p id="serviceModalIntro"></p>
+</div>
+<div class="service-modal-body" id="serviceModalBody"></div>
+</section>
+</div>
+<script src="./assets/js/script.js"></script><script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script><script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><script id="visual-skyverse-service-modal-script">
+(function(){
+  const modal=document.getElementById('serviceModal');
+  const title=document.getElementById('serviceModalTitle');
+  const kicker=document.getElementById('serviceModalKicker');
+  const intro=document.getElementById('serviceModalIntro');
+  const body=document.getElementById('serviceModalBody');
+  const buttons=document.querySelectorAll('[data-service]');
+  if(!modal||!title||!body) return;
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+  const card=(media,label,name,text,link='')=>`<article class="service-modal-card">${media}<div class="service-modal-card-content"><small>${esc(label)}</small><h3>${esc(name)}</h3><p>${esc(text)}</p>${link?`<a href="${link}" target="_blank" rel="noreferrer">Ver proyecto ↗</a>`:''}</div></article>`;
+  const data={
+    community:{kicker:'01 / COMMUNITY MANAGER',title:'Community Manager',intro:'Estrategia, producción y gestión de contenido para marcas, negocios y proyectos comerciales.',html:`
+      <p class="service-modal-text">Creo contenido a partir del trabajo real de una marca: procesos, productos, instalaciones, proyectos terminados, fotografía, reels y piezas pensadas para redes sociales.</p>
+      <div class="service-modal-grid">
+        ${card('<img src="./assets/images/project-1.jpg" alt="Contenido automotriz">','AUTOMOTRIZ','Contenido comercial','Fotografía y piezas visuales para mostrar productos, vehículos y proyectos.')}
+        ${card('<img src="./assets/images/project-2.png" alt="Contenido digital">','REDES','Contenido para redes','Reels, publicaciones y piezas visuales adaptadas a plataformas digitales.')}
+        ${card('<img src="./assets/images/blog-2.jpg" alt="Producción audiovisual">','VIDEO','Producción audiovisual','Video y fotografía para comunicar el valor real de una empresa.')}
       </div>
-      <div class="service-modal-body" id="serviceModalBody"></div>
-    </section>
-  </div>
-
-  <script src="./assets/js/script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-\n<script id="visual-skyverse-service-modal-script">\n(function(){\n  const modal=document.getElementById('serviceModal');\n  const title=document.getElementById('serviceModalTitle');\n  const kicker=document.getElementById('serviceModalKicker');\n  const intro=document.getElementById('serviceModalIntro');\n  const body=document.getElementById('serviceModalBody');\n  const buttons=document.querySelectorAll('[data-service]');\n  if(!modal||!title||!body) return;\n\n  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));\n  const card=(media,label,name,text,link='')=>`<article class="service-modal-card">${media}<div class="service-modal-card-content"><small>${esc(label)}</small><h3>${esc(name)}</h3><p>${esc(text)}</p>${link?`<a href="${link}" target="_blank" rel="noreferrer">Ver proyecto ↗</a>`:''}</div></article>`;\n\n  const data={\n    community:{\n      kicker:'01 / COMMUNITY MANAGER',\n      title:'Community Manager',\n      intro:'Estrategia, producción y gestión de contenido para que el trabajo real de una marca se convierta en contenido útil para sus redes.',\n      html:`<p class="service-modal-text">No se trata solamente de publicar. La idea es encontrar historias dentro de la operación de cada negocio: procesos, productos, instalaciones, equipo, antes y después, proyectos terminados y contenido educativo.</p>\n      <div class="service-modal-grid">\n        ${card('<img src="./assets/images/project-1.jpg" alt="Contenido automotriz">','AUTOMOTRIZ','Contenido para marcas','Fotografía y piezas visuales para mostrar productos, vehículos y proyectos.')}\n        ${card('<img src="./assets/images/project-2.png" alt="Contenido digital">','DIGITAL','Contenido para redes','Piezas visuales que pueden convertirse en reels, carruseles y publicaciones.')}\n        ${card('<img src="./assets/images/blog-2.jpg" alt="Video FPV">','VIDEO','Reels y video','Producción audiovisual para comunicar proyectos de una manera más dinámica.')}\n      </div>\n      <div class="service-modal-actions"><a class="service-modal-btn" href="https://www.instagram.com/edwinbikes/" target="_blank" rel="noreferrer">Ver Instagram ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Hablar sobre mi marca ↗</a></div>`\n    },\n    developer:{\n      kicker:'02 / DESARROLLO',\n      title:'Desarrollador',\n      intro:'Proyectos web, aplicaciones móviles y soluciones digitales desarrolladas a partir de ideas y necesidades concretas.',\n      html:`<p class="service-modal-text">Esta sección reúne proyectos de desarrollo que forman parte de mi recorrido, especialmente aplicaciones móviles, interfaces web y herramientas creadas con Flutter, Dart, HTML, CSS, JavaScript y VBA.</p>\n      <div class="service-modal-projects">\n        ${card('<img src="./assets/images/videos/gif.gif" alt="App widgets">','APP','Widgets Examples','Proyecto de práctica y desarrollo para Android.','https://github.com/EdwinBikes/house_motors')}\n        ${card('<img src="./assets/images/project-1.jpg" alt="House Motors">','APP','House Motors','Proyecto relacionado con el mundo automotriz.','https://github.com/EdwinBikes/house_motors')}\n        ${card('<img src="./assets/images/project-2.png" alt="Cinebikes">','FLUTTER','Cinebikes','Aplicación desarrollada con Flutter.','https://github.com/EdwinBikes/cine_app')}\n        ${card('<img src="./assets/images/project-3.jpg" alt="Portafolio">','WEB','Portafolio Edwin Bikes','Proyecto web y evolución del portafolio personal.','https://portfolio-edwinbikes.vercel.app/')}\n        ${card('<img src="./assets/images/project-4.png" alt="Netflix clone">','APP','Clone de Netflix','Proyecto de práctica de interfaz y desarrollo.','https://github.com/EdwinBikes/clone_netflix')}\n        ${card('<img src="./assets/images/project-5.png" alt="Edwin Música">','FLUTTER','Edwin Música','Aplicación musical desarrollada con Flutter.','https://github.com/EdwinBikes/flutter/tree/main/musica_app')}\n      </div>\n      <div class="service-modal-note">Los enlaces de los proyectos llevan a sus repositorios o demostraciones cuando están disponibles.</div>`\n    },\n    fpv:{\n      kicker:'03 / DRONE FPV',\n      title:'Piloto de Drone FPV',\n      intro:'Vuelos FPV y producción aérea para automotriz, inmobiliario, turismo, eventos y contenido comercial.',\n      html:`<p class="service-modal-text">El FPV es una herramienta narrativa: el movimiento debe aportar algo a la historia. Trabajo recorridos, seguimientos, reveals y tomas aéreas que pueden integrarse con cámara convencional y edición.</p>\n      <div class="service-modal-grid">\n        ${card('<img src="./assets/images/blog-1.jpg" alt="Ecoparque Chinátá">','FPV','Ecoparque de Chinátá','Video grabado con drone FPV en un entorno natural.','https://youtu.be/rwH63_cO9U')}\n        ${card('<img src="./assets/images/blog-2.jpg" alt="Renault 9 FPV">','AUTOMOTRIZ','Renault 9 + FPV','Proyecto automotriz con drone FPV e Insta360.','https://youtu.be/ZC6sT0v6_8c')}\n        ${card('<img src="./assets/images/playlist.png" alt="Playlist FPV">','SHOWREEL','Playlist de videos','Selección de videos realizados y publicados en YouTube.','https://youtube.com/playlist?list=PLllYEQQooZSYgctQ5e1r3-467F3_5S8FN')}\n      </div>\n      <div class="service-modal-actions"><a class="service-modal-btn" href="https://youtube.com/playlist?list=PLllYEQQooZSYgctQ5e1r3-467F3_5S8FN" target="_blank" rel="noreferrer">Ver playlist ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Cotizar producción ↗</a></div>`\n    },\n    '3d':{\n      kicker:'04 / FABRICACIÓN',\n      title:'Impresión 3D',\n      intro:'Diseño, prototipado e impresión de artículos personalizados, piezas funcionales y proyectos creativos.',\n      html:`<p class="service-modal-text">Esta ventana está preparada para que podamos convertirla en una galería completa de tus trabajos de impresión 3D. Por ahora utilizamos las imágenes disponibles en tu portafolio y dejamos un espacio listo para incorporar videos reales del proceso.</p>\n      <div class="service-modal-grid">\n        ${card('<img src="./assets/images/project-5.png" alt="Impresión 3D">','IMPRESIÓN 3D','Pieza personalizada','Ejemplo visual del área de impresión y prototipado.')}\n        ${card('<img src="./assets/images/project-7.png" alt="Proyecto 3D">','PROTOTIPO','Diseño y prototipado','Espacio para mostrar una pieza, modelo o prototipo terminado.')}\n        ${card('<img src="./assets/images/project-9.png" alt="Pieza 3D">','MODELADO','Pieza / modelo','Galería preparada para incorporar tus fotografías reales.')}\n      </div>\n      <div class="service-modal-card" style="margin-top:12px">\n        <video controls preload="metadata" poster="./assets/images/project-5.png">\n          <source src="./assets/videos/impresion3d.mp4" type="video/mp4">\n          Tu navegador no puede reproducir este video.\n        </video>\n        <div class="service-modal-card-content"><small>VIDEO DE PROCESO</small><h3>Fabricación paso a paso</h3><p>Coloca aquí tu video real de impresión. El archivo esperado es <strong>assets/videos/impresion3d.mp4</strong>.</p></div>\n      </div>\n      <div class="service-modal-actions"><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Consultar una pieza ↗</a></div>`\n    }\n  };\n\n  function open(key){\n    const d=data[key]; if(!d) return;\n    kicker.textContent=d.kicker; title.textContent=d.title; intro.textContent=d.intro; body.innerHTML=d.html;\n    modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.classList.add('service-modal-open');\n    setTimeout(()=>modal.querySelector('.service-modal-close')?.focus(),30);\n  }\n  function close(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('service-modal-open')}\n  buttons.forEach(b=>b.addEventListener('click',()=>open(b.dataset.service)));\n  modal.querySelectorAll('[data-service-close]').forEach(el=>el.addEventListener('click',close));\n  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))close()});\n})();\n</script>\n</body>
-</html>
+      <div class="service-modal-actions"><a class="service-modal-btn" href="https://www.instagram.com/edwinbikes/" target="_blank" rel="noreferrer">Ver Instagram ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Hablar sobre un proyecto ↗</a></div>`},
+    developer:{kicker:'02 / DESARROLLO',title:'Desarrollador',intro:'Aplicaciones móviles, proyectos web y soluciones digitales desarrolladas a partir de ideas y necesidades concretas.',html:`
+      <p class="service-modal-text">Aquí se reúnen proyectos de desarrollo que forman parte de mi recorrido con Flutter, Dart, HTML, CSS, JavaScript y VBA.</p>
+      <div class="service-modal-projects">
+        ${card('<img src="./assets/images/videos/gif.gif" alt="Widgets Examples">','APP','Widgets Examples','Proyecto de práctica y desarrollo para Android.','https://github.com/EdwinBikes')}
+        ${card('<img src="./assets/images/project-1.jpg" alt="House Motors">','APP','House Motors','Proyecto relacionado con el mundo automotriz.','https://github.com/EdwinBikes/house_motors')}
+        ${card('<img src="./assets/images/project-2.png" alt="Cinebikes">','FLUTTER','Cinebikes','Aplicación desarrollada con Flutter.','https://github.com/EdwinBikes')}
+        ${card('<img src="./assets/images/project-3.jpg" alt="Portafolio">','WEB','Portafolio Edwin Bikes','Proyecto web y evolución del portafolio personal.','https://portfolio-edwinbikes.vercel.app/')}
+        ${card('<img src="./assets/images/project-4.png" alt="Clone Netflix">','APP','Clone de Netflix','Proyecto de práctica de interfaz y desarrollo.','https://github.com/EdwinBikes')}
+        ${card('<img src="./assets/images/project-5.png" alt="Edwin Música">','FLUTTER','Edwin Música','Aplicación musical desarrollada con Flutter.','https://github.com/EdwinBikes')}
+      </div>`},
+    fpv:{kicker:'03 / DRONE FPV',title:'Piloto de Drone FPV',intro:'Vuelos FPV y producción aérea para automotriz, inmobiliario, turismo, eventos y contenido comercial.',html:`
+      <p class="service-modal-text">El FPV es una herramienta narrativa: movimiento, velocidad y perspectiva para crear tomas que complementen la historia de un proyecto.</p>
+      <div class="service-modal-grid">
+        ${card('<img src="./assets/images/blog-1.jpg" alt="Ecoparque">','FPV','Ecoparque de Chinátá','Producción aérea en entorno natural.')}
+        ${card('<img src="./assets/images/blog-2.jpg" alt="Renault 9">','AUTOMOTRIZ','Renault 9 + FPV','Proyecto automotriz con tomas FPV.')}
+        ${card('<img src="./assets/images/playlist.png" alt="Playlist FPV">','SHOWREEL','Videos FPV','Selección de trabajos publicados en YouTube.','https://youtube.com/')}
+      </div>
+      <div class="service-modal-actions"><a class="service-modal-btn" href="https://youtube.com/playlist?list=PLllYEQQooZSYgctQ5e1r3-467F3_5S8FN" target="_blank" rel="noreferrer">Ver playlist ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Cotizar producción ↗</a></div>`},
+    '3d':{kicker:'04 / FABRICACIÓN',title:'Impresión 3D',intro:'Diseño, prototipado e impresión de piezas personalizadas, funcionales y creativas.',html:`
+      <p class="service-modal-text">Esta sección está preparada para mostrar fotografías y videos reales de los artículos impresos: desde el diseño y la preparación hasta la pieza terminada.</p>
+      <div class="service-modal-grid">
+        ${card('<img src="./assets/images/project-5.png" alt="Impresión 3D">','IMPRESIÓN','Pieza personalizada','Galería de artículos y piezas impresas.')}
+        ${card('<img src="./assets/images/project-7.png" alt="Prototipo 3D">','PROTOTIPO','Diseño y prototipado','Modelos, pruebas y piezas funcionales.')}
+        ${card('<img src="./assets/images/project-9.png" alt="Pieza terminada">','FINAL','Pieza terminada','Fotografías reales del resultado final.')}
+      </div>
+      <div class="service-modal-card" style="margin-top:13px"><video controls preload="metadata" poster="./assets/images/project-5.png"><source src="./assets/videos/impresion3d.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><div class="service-modal-card-content"><small>VIDEO</small><h3>Proceso de impresión</h3><p>Cuando tengas el video real, guárdalo como <strong>assets/videos/impresion3d.mp4</strong>.</p></div></div>`}
+  };
+  function open(key){const d=data[key];if(!d)return;kicker.textContent=d.kicker;title.textContent=d.title;intro.textContent=d.intro;body.innerHTML=d.html;modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.classList.add('service-modal-open');setTimeout(()=>modal.querySelector('.service-modal-close')?.focus(),30)}
+  function close(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('service-modal-open')}
+  buttons.forEach(b=>b.addEventListener('click',()=>open(b.dataset.service)));
+  modal.querySelectorAll('[data-service-close]').forEach(el=>el.addEventListener('click',close));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))close()});
+})();
+</script></body></html>
