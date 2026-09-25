@@ -166,3 +166,127 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
   modal.querySelectorAll('[data-service-close]').forEach(el=>el.addEventListener('click',close));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))close()});
 })();
+
+/*-----------------------------------*
+  #DYNAMIC VIDEO HERO
+*-----------------------------------*/
+
+(function(){
+  const video=document.getElementById("vsvHeroVideo");
+  const source=document.getElementById("vsvHeroVideoSource");
+  const hero=document.getElementById("vsvVideoHero");
+  const kicker=document.getElementById("vsvHeroKicker");
+  const title=document.getElementById("vsvHeroTitle");
+  const text=document.getElementById("vsvHeroText");
+  const progress=document.getElementById("vsvHeroProgress");
+  const contactButton=document.querySelector("[data-video-contact]");
+
+  if(!video||!source||!hero) return;
+
+  const videos={
+    default:{
+      src:"./assets/videos/hero.mp4",
+      poster:"./assets/images/blog-1.jpg",
+      kicker:"VISUAL SKY VERSE",
+      title:"Historias en movimiento",
+      text:"Producción audiovisual, fotografía aérea y contenido visual para marcas y proyectos."
+    },
+    community:{
+      src:"./assets/videos/community-manager.mp4",
+      poster:"./assets/images/project-1.jpg",
+      kicker:"01 / COMMUNITY MANAGER",
+      title:"Contenido que conecta",
+      text:"Estrategia, fotografía, video y contenido pensado para que las marcas tengan presencia en redes."
+    },
+    developer:{
+      src:"./assets/videos/desarrollo.mp4",
+      poster:"./assets/images/project-3.jpg",
+      kicker:"02 / DESARROLLO",
+      title:"Ideas que se convierten en digital",
+      text:"Aplicaciones, páginas web y soluciones digitales construidas desde la idea hasta el producto."
+    },
+    fpv:{
+      src:"./assets/videos/drone-fpv.mp4",
+      poster:"./assets/images/blog-2.jpg",
+      kicker:"03 / DRONE FPV",
+      title:"Vuela. Graba. Impacta.",
+      text:"Tomas FPV dinámicas para automotriz, inmobiliario, turismo, eventos y contenido comercial."
+    },
+    "3d":{
+      src:"./assets/videos/impresion-3d.mp4",
+      poster:"./assets/images/project-5.png",
+      kicker:"04 / IMPRESIÓN 3D",
+      title:"Del diseño a la pieza",
+      text:"Prototipado y fabricación 3D para crear piezas personalizadas, funcionales y creativas."
+    },
+    resumen:{
+      src:"./assets/videos/desarrollo.mp4",
+      poster:"./assets/images/project-3.jpg",
+      kicker:"TRAYECTORIA",
+      title:"Experiencia que construye proyectos",
+      text:"Conoce mi formación, experiencia profesional y las herramientas que forman parte de mi trabajo."
+    },
+    portafolio:{
+      src:"./assets/videos/hero.mp4",
+      poster:"./assets/images/project-3.jpg",
+      kicker:"PORTAFOLIO",
+      title:"Trabajo que habla por sí solo",
+      text:"Explora proyectos de desarrollo, contenido audiovisual y experiencias digitales."
+    },
+    blog:{
+      src:"./assets/videos/drone-fpv.mp4",
+      poster:"./assets/images/playlist.png",
+      kicker:"BLOG",
+      title:"Detrás de cada proyecto",
+      text:"Videos, experiencias y proyectos que forman parte de mi recorrido creativo."
+    },
+    contactame:{
+      src:"./assets/videos/hero.mp4",
+      poster:"./assets/images/blog-1.jpg",
+      kicker:"CONTACTO",
+      title:"Hagamos algo visualmente diferente",
+      text:"Cuéntame qué quieres crear y conversemos sobre la mejor forma de llevarlo a la realidad."
+    }
+  };
+
+  function setHero(key){
+    const item=videos[key]||videos.default;
+    if(source.getAttribute("src")!==item.src){
+      video.pause();
+      source.src=item.src;
+      video.poster=item.poster;
+      video.load();
+      video.play().catch(()=>{});
+    }else{
+      video.poster=item.poster;
+    }
+    kicker.textContent=item.kicker;
+    title.textContent=item.title;
+    text.textContent=item.text;
+    if(progress) progress.style.width="0%";
+  }
+
+  video.addEventListener("timeupdate",()=>{
+    if(video.duration&&progress){
+      progress.style.width=((video.currentTime/video.duration)*100)+"%";
+    }
+  });
+
+  document.querySelectorAll("[data-service]").forEach(button=>{
+    button.addEventListener("click",()=>setHero(button.dataset.service));
+  });
+
+  document.querySelectorAll("[data-nav-link]").forEach(button=>{
+    button.addEventListener("click",()=>setHero(button.dataset.navLink));
+  });
+
+  if(contactButton){
+    contactButton.addEventListener("click",()=>{
+      const target=contactButton.dataset.videoContact;
+      const button=document.querySelector('[data-nav-link="'+target+'"]');
+      if(button) button.click();
+    });
+  }
+
+  setHero("default");
+})();
