@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-\n<style id="visual-skyverse-service-modal">\n/* =========================================================\n   VISUAL SKY VERSE — Service shortcuts + modal system\n   Keeps the existing portfolio theme and only adds the new UI.\n   ========================================================= */\n.service-shortcuts{\n  display:grid;\n  grid-template-columns:repeat(2,minmax(0,1fr));\n  gap:8px;\n  margin:16px 0 8px;\n}\n.service-shortcut{\n  appearance:none;\n  border:1px solid rgba(255,255,255,.07);\n  background:#202023;\n  color:#d8d8dc;\n  border-radius:8px;\n  min-height:40px;\n  padding:7px 9px;\n  display:flex;\n  align-items:center;\n  justify-content:flex-start;\n  gap:8px;\n  font:500 10px/1.15 Poppins,sans-serif;\n  cursor:pointer;\n  transition:transform .2s ease,border-color .2s ease,background .2s ease,color .2s ease,box-shadow .2s ease;\n}\n.service-shortcut:hover,.service-shortcut:focus-visible{\n  transform:translateY(-2px);\n  background:#29292d;\n  color:#fff;\n  border-color:rgba(246,211,107,.55);\n  box-shadow:0 8px 22px rgba(0,0,0,.25);\n  outline:none;\n}\n.shortcut-icon{font-size:15px;line-height:1;flex:0 0 auto}\n.visitas-box{\n  text-align:center;\n  margin-top:10px;\n}\n.visitas-box .contact-title{margin-bottom:5px}\n.visitas-box img{\n  display:inline-block;\n  max-width:100%;\n  height:auto;\n  border-radius:4px;\n}\n.service-modal{\n  position:fixed;\n  inset:0;\n  z-index:9999;\n  display:flex;\n  align-items:center;\n  justify-content:center;\n  padding:22px;\n  visibility:hidden;\n  opacity:0;\n  pointer-events:none;\n  transition:opacity .25s ease,visibility .25s ease;\n}\n.service-modal.is-open{visibility:visible;opacity:1;pointer-events:auto}\n.service-modal-overlay{position:absolute;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(7px)}\n.service-modal-dialog{\n  position:relative;\n  z-index:1;\n  width:min(980px,100%);\n  max-height:min(88vh,900px);\n  overflow:auto;\n  background:#171719;\n  border:1px solid rgba(255,255,255,.09);\n  border-radius:18px;\n  box-shadow:0 30px 100px rgba(0,0,0,.65);\n  transform:translateY(24px) scale(.98);\n  transition:transform .28s ease;\n  scrollbar-width:thin;\n}\n.service-modal.is-open .service-modal-dialog{transform:none}\n.service-modal-close{\n  position:absolute;right:16px;top:14px;z-index:3;\n  width:38px;height:38px;border-radius:50%;\n  border:1px solid rgba(255,255,255,.09);\n  background:#232326;color:#fff;cursor:pointer;font-size:25px;line-height:1;\n}\n.service-modal-close:hover{background:#2e2e32;color:#f6d36b}\n.service-modal-header{padding:34px 38px 26px;border-bottom:1px solid rgba(255,255,255,.07)}\n.service-modal-kicker{display:inline-block;color:#f6d36b;font:600 9px/1.2 Poppins,sans-serif;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}\n.service-modal-header h2{font:600 30px/1.15 Poppins,sans-serif;color:#f4f4f5;margin:0 45px 8px 0}\n.service-modal-header p{color:#aaaab1;font:400 13px/1.7 Poppins,sans-serif;max-width:760px;margin:0}\n.service-modal-body{padding:28px 38px 36px}\n.service-modal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}\n.service-modal-card{background:#202023;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden}\n.service-modal-card img,.service-modal-card video{display:block;width:100%;height:190px;object-fit:cover;background:#0c0c0e}\n.service-modal-card .media-placeholder{height:190px;display:grid;place-items:center;padding:25px;text-align:center;color:#8f8f96;background:linear-gradient(145deg,#232327,#141416);font-size:11px;line-height:1.6}\n.service-modal-card-content{padding:14px 15px 16px}\n.service-modal-card-content small{display:block;color:#f6d36b;font-size:8px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:5px}\n.service-modal-card-content h3{font:600 16px/1.3 Poppins,sans-serif;color:#eee;margin:0 0 5px}\n.service-modal-card-content p{font:400 10px/1.65 Poppins,sans-serif;color:#96969d;margin:0}\n.service-modal-card-content a{display:inline-flex;margin-top:10px;color:#f6d36b;font-size:10px;font-weight:600}\n.service-modal-text{color:#b2b2b8;font:400 12px/1.8 Poppins,sans-serif;margin-bottom:20px}\n.service-modal-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}\n.service-modal-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}\n.service-modal-btn{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 15px;border-radius:8px;background:#252528;border:1px solid rgba(255,255,255,.08);color:#eee;font:600 10px Poppins,sans-serif}\n.service-modal-btn:hover{border-color:#f6d36b;color:#f6d36b}\n.service-modal-note{margin-top:20px;padding:13px 15px;border-left:2px solid #f6d36b;background:#202023;color:#909097;font:400 10px/1.7 Poppins,sans-serif}\nbody.service-modal-open{overflow:hidden}\n@media(max-width:900px){.service-modal-grid,.service-modal-projects{grid-template-columns:repeat(2,minmax(0,1fr))}}\n@media(max-width:650px){\n  .service-shortcuts{grid-template-columns:1fr 1fr}\n  .service-modal{padding:10px}\n  .service-modal-dialog{max-height:94vh;border-radius:14px}\n  .service-modal-header{padding:28px 20px 20px}\n  .service-modal-body{padding:20px}\n  .service-modal-grid,.service-modal-projects{grid-template-columns:1fr}\n  .service-modal-card img,.service-modal-card video,.service-modal-card .media-placeholder{height:210px}\n}\n</style>\n</head>
+</head>
 
 <body>
   <main>
@@ -24,6 +24,9 @@
 
         <div class="info-content">
           <h1 class="name" title="Edwin Bikes">Edwin Bikes</h1>
+          <p class="title">Community Manager</p>
+          <p class="title">Piloto de Drone FPV</p>
+          <p class="title">Desarrollador Móvil</p>
         </div>
 
         <div class="visitas-box">
@@ -31,25 +34,6 @@
           <a href="#" title="Contador de Visitas" aria-label="Contador de visitas">
             <img src="https://counter9.stat.ovh/private/contadorvisitasgratis.php?c=gl2qd8pqsczl21ze7yauakf7f14ayhfl" alt="contador de visitas" border="0">
           </a>
-        </div>
-
-        <div class="service-shortcuts" aria-label="Especialidades de Edwin Bikes">
-          <button class="service-shortcut" type="button" data-service="community">
-            <span class="shortcut-icon">📱</span>
-            <span>Community Manager</span>
-          </button>
-          <button class="service-shortcut" type="button" data-service="developer">
-            <span class="shortcut-icon">💻</span>
-            <span>Desarrollador</span>
-          </button>
-          <button class="service-shortcut" type="button" data-service="fpv">
-            <span class="shortcut-icon">🚁</span>
-            <span>Piloto de Drone FPV</span>
-          </button>
-          <button class="service-shortcut" type="button" data-service="3d">
-            <span class="shortcut-icon">🖨️</span>
-            <span>Impresión 3D</span>
-          </button>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn type="button">
@@ -698,22 +682,168 @@
     </div>
   </main>
 
-  <!-- Service detail modal -->
-  <div class="service-modal" id="serviceModal" aria-hidden="true">
-    <div class="service-modal-overlay" data-service-close></div>
-    <section class="service-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="serviceModalTitle">
-      <button class="service-modal-close" type="button" data-service-close aria-label="Cerrar">&times;</button>
-      <div class="service-modal-header">
-        <span class="service-modal-kicker" id="serviceModalKicker">ESPECIALIDAD</span>
-        <h2 id="serviceModalTitle">Servicio</h2>
-        <p id="serviceModalIntro"></p>
-      </div>
-      <div class="service-modal-body" id="serviceModalBody"></div>
-    </section>
-  </div>
-
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-\n<script id="visual-skyverse-service-modal-script">\n(function(){\n  const modal=document.getElementById('serviceModal');\n  const title=document.getElementById('serviceModalTitle');\n  const kicker=document.getElementById('serviceModalKicker');\n  const intro=document.getElementById('serviceModalIntro');\n  const body=document.getElementById('serviceModalBody');\n  const buttons=document.querySelectorAll('[data-service]');\n  if(!modal||!title||!body) return;\n\n  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));\n  const card=(media,label,name,text,link='')=>`<article class="service-modal-card">${media}<div class="service-modal-card-content"><small>${esc(label)}</small><h3>${esc(name)}</h3><p>${esc(text)}</p>${link?`<a href="${link}" target="_blank" rel="noreferrer">Ver proyecto ↗</a>`:''}</div></article>`;\n\n  const data={\n    community:{\n      kicker:'01 / COMMUNITY MANAGER',\n      title:'Community Manager',\n      intro:'Estrategia, producción y gestión de contenido para que el trabajo real de una marca se convierta en contenido útil para sus redes.',\n      html:`<p class="service-modal-text">No se trata solamente de publicar. La idea es encontrar historias dentro de la operación de cada negocio: procesos, productos, instalaciones, equipo, antes y después, proyectos terminados y contenido educativo.</p>\n      <div class="service-modal-grid">\n        ${card('<img src="./assets/images/project-1.jpg" alt="Contenido automotriz">','AUTOMOTRIZ','Contenido para marcas','Fotografía y piezas visuales para mostrar productos, vehículos y proyectos.')}\n        ${card('<img src="./assets/images/project-2.png" alt="Contenido digital">','DIGITAL','Contenido para redes','Piezas visuales que pueden convertirse en reels, carruseles y publicaciones.')}\n        ${card('<img src="./assets/images/blog-2.jpg" alt="Video FPV">','VIDEO','Reels y video','Producción audiovisual para comunicar proyectos de una manera más dinámica.')}\n      </div>\n      <div class="service-modal-actions"><a class="service-modal-btn" href="https://www.instagram.com/edwinbikes/" target="_blank" rel="noreferrer">Ver Instagram ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Hablar sobre mi marca ↗</a></div>`\n    },\n    developer:{\n      kicker:'02 / DESARROLLO',\n      title:'Desarrollador',\n      intro:'Proyectos web, aplicaciones móviles y soluciones digitales desarrolladas a partir de ideas y necesidades concretas.',\n      html:`<p class="service-modal-text">Esta sección reúne proyectos de desarrollo que forman parte de mi recorrido, especialmente aplicaciones móviles, interfaces web y herramientas creadas con Flutter, Dart, HTML, CSS, JavaScript y VBA.</p>\n      <div class="service-modal-projects">\n        ${card('<img src="./assets/images/videos/gif.gif" alt="App widgets">','APP','Widgets Examples','Proyecto de práctica y desarrollo para Android.','https://github.com/EdwinBikes/house_motors')}\n        ${card('<img src="./assets/images/project-1.jpg" alt="House Motors">','APP','House Motors','Proyecto relacionado con el mundo automotriz.','https://github.com/EdwinBikes/house_motors')}\n        ${card('<img src="./assets/images/project-2.png" alt="Cinebikes">','FLUTTER','Cinebikes','Aplicación desarrollada con Flutter.','https://github.com/EdwinBikes/cine_app')}\n        ${card('<img src="./assets/images/project-3.jpg" alt="Portafolio">','WEB','Portafolio Edwin Bikes','Proyecto web y evolución del portafolio personal.','https://portfolio-edwinbikes.vercel.app/')}\n        ${card('<img src="./assets/images/project-4.png" alt="Netflix clone">','APP','Clone de Netflix','Proyecto de práctica de interfaz y desarrollo.','https://github.com/EdwinBikes/clone_netflix')}\n        ${card('<img src="./assets/images/project-5.png" alt="Edwin Música">','FLUTTER','Edwin Música','Aplicación musical desarrollada con Flutter.','https://github.com/EdwinBikes/flutter/tree/main/musica_app')}\n      </div>\n      <div class="service-modal-note">Los enlaces de los proyectos llevan a sus repositorios o demostraciones cuando están disponibles.</div>`\n    },\n    fpv:{\n      kicker:'03 / DRONE FPV',\n      title:'Piloto de Drone FPV',\n      intro:'Vuelos FPV y producción aérea para automotriz, inmobiliario, turismo, eventos y contenido comercial.',\n      html:`<p class="service-modal-text">El FPV es una herramienta narrativa: el movimiento debe aportar algo a la historia. Trabajo recorridos, seguimientos, reveals y tomas aéreas que pueden integrarse con cámara convencional y edición.</p>\n      <div class="service-modal-grid">\n        ${card('<img src="./assets/images/blog-1.jpg" alt="Ecoparque Chinátá">','FPV','Ecoparque de Chinátá','Video grabado con drone FPV en un entorno natural.','https://youtu.be/rwH63_cO9U')}\n        ${card('<img src="./assets/images/blog-2.jpg" alt="Renault 9 FPV">','AUTOMOTRIZ','Renault 9 + FPV','Proyecto automotriz con drone FPV e Insta360.','https://youtu.be/ZC6sT0v6_8c')}\n        ${card('<img src="./assets/images/playlist.png" alt="Playlist FPV">','SHOWREEL','Playlist de videos','Selección de videos realizados y publicados en YouTube.','https://youtube.com/playlist?list=PLllYEQQooZSYgctQ5e1r3-467F3_5S8FN')}\n      </div>\n      <div class="service-modal-actions"><a class="service-modal-btn" href="https://youtube.com/playlist?list=PLllYEQQooZSYgctQ5e1r3-467F3_5S8FN" target="_blank" rel="noreferrer">Ver playlist ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Cotizar producción ↗</a></div>`\n    },\n    '3d':{\n      kicker:'04 / FABRICACIÓN',\n      title:'Impresión 3D',\n      intro:'Diseño, prototipado e impresión de artículos personalizados, piezas funcionales y proyectos creativos.',\n      html:`<p class="service-modal-text">Esta ventana está preparada para que podamos convertirla en una galería completa de tus trabajos de impresión 3D. Por ahora utilizamos las imágenes disponibles en tu portafolio y dejamos un espacio listo para incorporar videos reales del proceso.</p>\n      <div class="service-modal-grid">\n        ${card('<img src="./assets/images/project-5.png" alt="Impresión 3D">','IMPRESIÓN 3D','Pieza personalizada','Ejemplo visual del área de impresión y prototipado.')}\n        ${card('<img src="./assets/images/project-7.png" alt="Proyecto 3D">','PROTOTIPO','Diseño y prototipado','Espacio para mostrar una pieza, modelo o prototipo terminado.')}\n        ${card('<img src="./assets/images/project-9.png" alt="Pieza 3D">','MODELADO','Pieza / modelo','Galería preparada para incorporar tus fotografías reales.')}\n      </div>\n      <div class="service-modal-card" style="margin-top:12px">\n        <video controls preload="metadata" poster="./assets/images/project-5.png">\n          <source src="./assets/videos/impresion3d.mp4" type="video/mp4">\n          Tu navegador no puede reproducir este video.\n        </video>\n        <div class="service-modal-card-content"><small>VIDEO DE PROCESO</small><h3>Fabricación paso a paso</h3><p>Coloca aquí tu video real de impresión. El archivo esperado es <strong>assets/videos/impresion3d.mp4</strong>.</p></div>\n      </div>\n      <div class="service-modal-actions"><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Consultar una pieza ↗</a></div>`\n    }\n  };\n\n  function open(key){\n    const d=data[key]; if(!d) return;\n    kicker.textContent=d.kicker; title.textContent=d.title; intro.textContent=d.intro; body.innerHTML=d.html;\n    modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.classList.add('service-modal-open');\n    setTimeout(()=>modal.querySelector('.service-modal-close')?.focus(),30);\n  }\n  function close(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('service-modal-open')}\n  buttons.forEach(b=>b.addEventListener('click',()=>open(b.dataset.service)));\n  modal.querySelectorAll('[data-service-close]').forEach(el=>el.addEventListener('click',close));\n  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))close()});\n})();\n</script>\n</body>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
