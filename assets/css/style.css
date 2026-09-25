@@ -3294,3 +3294,64 @@ body{
     height:14px!important;
   }
 }
+
+
+/* Compact contact icons */
+.vsv-contact-strip .icon-box{
+  width:38px!important;
+  height:38px!important;
+  min-width:38px!important;
+  min-height:38px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex-shrink:0!important;
+}
+
+.vsv-contact-strip .icon-box ion-icon{
+  font-size:17px!important;
+  width:17px!important;
+  height:17px!important;
+}
+
+.vsv-contact-strip .contact-item{
+  min-width:0;
+  padding:14px 16px!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+}
+
+.vsv-contact-strip .contact-info{
+  min-width:0;
+  overflow:hidden;
+}
+
+.vsv-contact-strip .contact-link{
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+@media(min-width:761px){
+  .vsv-contact-strip{
+    display:grid!important;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:12px!important;
+  }
+}
+
+@media(max-width:760px){
+  .vsv-contact-strip{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px!important;
+  }
+}
+
+@media(max-width:480px){
+  .vsv-contact-strip{
+    grid-template-columns:1fr;
+  }
+}
