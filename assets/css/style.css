@@ -2969,3 +2969,294 @@ body{
   .vsv-contact-strip{flex-direction:column}
   .vsv-modern-footer{width:calc(100% - 28px);flex-direction:column;text-align:center;align-items:center}
 }
+
+
+/*-----------------------------------*
+  #RESPONSIVE VERTICAL FLOW FIX
+*-----------------------------------*/
+
+/* Cada sección ocupa su propio bloque vertical */
+.vsv-modern-main,
+.vsv-services-section,
+.vsv-modern-content,
+.vsv-content-inner{
+  display:block;
+  width:100%;
+}
+
+.vsv-modern-main{
+  overflow:hidden;
+}
+
+.vsv-modern-hero,
+.vsv-services-section,
+.vsv-modern-content{
+  box-sizing:border-box;
+}
+
+/* Separación clara entre hero, servicios y contenido */
+.vsv-modern-hero{
+  width:100%;
+  min-height:100vh;
+  min-height:100svh;
+}
+
+.vsv-services-section{
+  width:min(1180px,calc(100% - 48px));
+  margin:0 auto;
+  padding:120px 0 100px;
+}
+
+.vsv-modern-content{
+  width:min(1180px,calc(100% - 48px));
+  margin:0 auto;
+  padding:30px 0 120px;
+}
+
+/* Evita que elementos heredados formen filas gigantes */
+.vsv-content-inner > article{
+  display:block;
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
+  clear:both;
+}
+
+/* El contenido de las secciones debe apilarse */
+.vsv-content-inner > article.active{
+  display:block;
+}
+
+/* Portafolio: tarjetas distribuidas en una cuadrícula responsive */
+.vsv-content-inner .project-list{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+  width:100%;
+  margin:30px 0 0;
+  padding:0;
+}
+
+.vsv-content-inner .project-item{
+  width:100%!important;
+  min-width:0;
+  margin:0!important;
+}
+
+.vsv-content-inner .project-item a{
+  display:block;
+  width:100%;
+}
+
+.vsv-content-inner .project-img{
+  width:100%;
+  aspect-ratio:16/10;
+  overflow:hidden;
+}
+
+.vsv-content-inner .project-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Blog también se adapta al ancho disponible */
+.vsv-content-inner .blog-posts-list{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+  width:100%;
+  padding:0;
+}
+
+.vsv-content-inner .blog-post-item{
+  width:100%!important;
+  min-width:0;
+  margin:0!important;
+}
+
+.vsv-content-inner .blog-post-item > a{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+.vsv-content-inner .blog-banner-box{
+  width:100%;
+  aspect-ratio:16/10;
+  overflow:hidden;
+}
+
+.vsv-content-inner .blog-banner-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Timeline en columna, nunca horizontal */
+.vsv-content-inner .timeline{
+  display:block;
+  width:100%;
+  margin-bottom:55px;
+}
+
+.vsv-content-inner .timeline-list{
+  display:block;
+  width:100%;
+}
+
+.vsv-content-inner .timeline-item{
+  display:block;
+  width:100%;
+  max-width:900px;
+  margin-bottom:30px;
+}
+
+/* Habilidades distribuidas sin desbordamiento */
+.vsv-content-inner .skills-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  width:100%;
+  padding:25px;
+  box-sizing:border-box;
+}
+
+.vsv-content-inner .skills-item{
+  min-width:0;
+}
+
+/* Contacto */
+.vsv-content-inner .mapbox,
+.vsv-content-inner .contact-form{
+  width:100%;
+  box-sizing:border-box;
+}
+
+.vsv-content-inner .mapbox iframe{
+  width:100%;
+  max-width:100%;
+  min-height:360px;
+  border:0;
+}
+
+/* Servicios siempre dentro del ancho disponible */
+.vsv-services-grid{
+  width:100%;
+  box-sizing:border-box;
+}
+
+/* PC grande */
+@media(min-width:1200px){
+  .vsv-modern-hero{
+    padding-left:80px;
+    padding-right:80px;
+  }
+
+  .vsv-services-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+
+  .vsv-content-inner > article{
+    min-height:0;
+  }
+}
+
+/* Laptop / PC */
+@media(max-width:1100px){
+  .vsv-modern-links button{
+    padding-left:9px;
+    padding-right:9px;
+  }
+
+  .vsv-header-cta{
+    padding-left:14px;
+    padding-right:14px;
+  }
+
+  .vsv-content-inner .project-list,
+  .vsv-content-inner .blog-posts-list{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .vsv-services-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+/* Tablet */
+@media(max-width:760px){
+  .vsv-modern-header{
+    position:fixed;
+  }
+
+  .vsv-modern-nav{
+    width:calc(100% - 28px);
+  }
+
+  .vsv-modern-links{
+    display:none;
+  }
+
+  .vsv-modern-hero{
+    min-height:100svh;
+    padding-top:100px;
+  }
+
+  .vsv-services-section{
+    width:calc(100% - 32px);
+    padding:85px 0 70px;
+  }
+
+  .vsv-modern-content{
+    width:calc(100% - 32px);
+    padding:25px 0 80px;
+  }
+
+  .vsv-content-inner .project-list,
+  .vsv-content-inner .blog-posts-list{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .vsv-content-inner .skills-list{
+    grid-template-columns:1fr;
+  }
+}
+
+/* Teléfonos */
+@media(max-width:480px){
+  .vsv-modern-nav{
+    min-height:62px;
+  }
+
+  .vsv-brand span{
+    font-size:13px;
+  }
+
+  .vsv-header-cta{
+    padding:8px 12px;
+    font-size:9px;
+  }
+
+  .vsv-hero-content h1{
+    font-size:clamp(44px,14vw,68px);
+  }
+
+  .vsv-services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .vsv-service-card{
+    min-height:215px;
+  }
+
+  .vsv-content-inner > article{
+    padding:24px 18px;
+  }
+
+  .vsv-contact-strip{
+    display:flex!important;
+    flex-direction:column;
+  }
+}
