@@ -2402,112 +2402,7 @@ body.service-modal-open{overflow:hidden}
   .service-modal-grid,.service-modal-projects{grid-template-columns:1fr}
 }
 
-/*-----------------------------------*
-  #VISUAL SKY VERSE VIDEO HERO
-*-----------------------------------*/
-
-.vsv-video-hero{
-  position:relative;
-  width:100%;
-  min-height:clamp(430px,62vh,680px);
-  margin:0 0 25px;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  isolation:isolate;
-  background:#09090a;
-  border:1px solid #29292d;
-}
-.vsv-video-hero__video{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  z-index:-2;
-}
-.vsv-video-hero__overlay{
-  position:absolute;
-  inset:0;
-  z-index:-1;
-  background:
-    linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.43) 55%,rgba(0,0,0,.68) 100%),
-    linear-gradient(0deg,rgba(0,0,0,.48),transparent 55%,rgba(0,0,0,.32));
-}
-.vsv-video-hero__content{
-  width:min(760px,88%);
-  padding:50px 25px;
-  text-align:center;
-  color:#fff;
-  margin-inline:auto;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-}
-.vsv-video-hero__kicker{
-  display:block;
-  margin-bottom:12px;
-  color:#f6d36b;
-  font-size:9px;
-  font-weight:600;
-  letter-spacing:.2em;
-}
-.vsv-video-hero__content h2{
-  margin:0 0 15px;
-  color:#fff;
-  font-size:clamp(34px,7vw,68px);
-  line-height:1.02;
-  letter-spacing:-1.8px;
-}
-.vsv-video-hero__content p{
-  max-width:650px;
-  margin:0 auto 26px;
-  color:rgba(255,255,255,.82);
-  font-size:clamp(12px,1.8vw,16px);
-  line-height:1.7;
-}
-.vsv-video-hero__button{
-  min-height:42px;
-  padding:0 20px;
-  border:1px solid rgba(246,211,107,.55);
-  border-radius:4px;
-  background:rgba(246,211,107,.96);
-  color:#101011;
-  font:600 10px/1 Poppins,sans-serif;
-  cursor:pointer;
-  transition:transform .2s ease,background .2s ease,box-shadow .2s ease;
-}
-.vsv-video-hero__button:hover{
-  transform:translateY(-2px);
-  background:#f8da7b;
-  box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-.vsv-video-hero__progress{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  height:3px;
-  background:rgba(255,255,255,.12);
-}
-.vsv-video-hero__progress span{
-  display:block;
-  width:0;
-  height:100%;
-  background:#f6d36b;
-  transition:width .35s ease;
-}
-@media(max-width:700px){
-  .vsv-video-hero{min-height:440px;margin-bottom:18px}
-  .vsv-video-hero__content{padding:35px 15px}
-  .vsv-video-hero__content h2{letter-spacing:-1px}
-  .vsv-video-hero__overlay{background:rgba(0,0,0,.62)}
-}
-
-/*-----------------------------------*
+----------------------------------*
   #VSV RESPONSIVE PROFILE + MODAL FIXES
 *-----------------------------------*/
 
@@ -2554,4 +2449,57 @@ body.service-modal-open{overflow:hidden}
   .vsv-profile .avatar-box{max-width:100%}
   .vsv-profile .avatar-box img{max-width:100%}
   .service-modal-close{right:10px;top:10px}
+}
+
+
+/*-----------------------------------*
+  #VISUAL SKY VERSE BODY VIDEO
+*-----------------------------------*/
+
+html,
+body{
+  min-height:100%;
+}
+
+body{
+  position:relative;
+  background:#09090a;
+  isolation:isolate;
+}
+
+.vsv-background-video{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  z-index:0;
+  pointer-events:none;
+  background:#09090a;
+}
+
+.vsv-background-overlay{
+  position:fixed;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.46) 50%,rgba(0,0,0,.72) 100%),
+    linear-gradient(0deg,rgba(0,0,0,.62),rgba(0,0,0,.25) 50%,rgba(0,0,0,.52));
+}
+
+main.vsv-main{
+  position:relative;
+  z-index:2;
+}
+
+.service-modal{
+  z-index:9999;
+}
+
+@media(max-width:700px){
+  .vsv-background-overlay{
+    background:rgba(0,0,0,.64);
+  }
 }
