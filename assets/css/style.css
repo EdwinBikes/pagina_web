@@ -3264,14 +3264,14 @@ body{
 
 .vsv-visitor-counter small{
   color:#77777f;
-  font:500 8px Poppins,sans-serif;
+  font:500 12px Poppins,sans-serif;
   text-transform:uppercase;
   letter-spacing:.08em;
 }
 
 .vsv-visitor-counter img{
   width:auto!important;
-  height:16px!important;
+  height:20px!important;
   max-width:90px;
   object-fit:contain!important;
   border:0!important;
