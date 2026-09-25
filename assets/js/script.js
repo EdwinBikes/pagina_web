@@ -173,7 +173,7 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
       <div class="service-modal-grid">
         ${card('<img src="./assets/images/blog-1.jpg" alt="Ecoparque">','FPV','Ecoparque de Chinátá','Producción aérea en entorno natural.')}
         ${card('<img src="./assets/images/blog-2.jpg" alt="Renault 9">','AUTOMOTRIZ','Renault 9 + FPV','Proyecto automotriz con tomas FPV.')}
-        ${card('<img src="./assets/images/playlist.png" alt="Playlist FPV">','SHOWREEL','Videos FPV','Selección de trabajos publicados en YouTube.','https://youtube.com/')}
+        ${card('<img src="./assets/images/playlist.png" alt="Playlist FPV">','SHOWREEL','Videos FPV','Selección de trabajos publicados en YouTube.','https://youtube.com/edwin-bikes')}
       </div>
       <div class="service-modal-actions"><a class="service-modal-btn" href="https://youtube.com/playlist?list=PLllYEQQooZSYgctQ5e1r3-467F3_5S8FN" target="_blank" rel="noreferrer">Ver playlist ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Cotizar producción ↗</a></div>`},
     '3d':{kicker:'04 / FABRICACIÓN',title:'Impresión 3D',intro:'Diseño, prototipado e impresión de piezas personalizadas, funcionales y creativas.',html:`
@@ -183,7 +183,7 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
         ${card('<img src="./assets/images/project-7.png" alt="Prototipo 3D">','PROTOTIPO','Diseño y prototipado','Modelos, pruebas y piezas funcionales.')}
         ${card('<img src="./assets/images/project-9.png" alt="Pieza terminada">','FINAL','Pieza terminada','Fotografías reales del resultado final.')}
       </div>
-      <div class="service-modal-card" style="margin-top:13px"><video controls preload="metadata" poster="./assets/images/project-5.png"><source src="./assets/videos/impresion3d.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><div class="service-modal-card-content"><small>VIDEO</small><h3>Proceso de impresión</h3><p>Cuando tengas el video real, guárdalo como <strong>assets/videos/impresion3d.mp4</strong>.</p></div></div>`}
+      <div class="service-modal-card" style="margin-top:13px"><video controls preload="metadata" poster="./assets/images/project-5.png"><source src="./assets/videos/video.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><div class="service-modal-card-content"><small>VIDEO</small><h3>Proceso de impresión</h3><p>Cuando tengas el video real, guárdalo como <strong>assets/videos/impresion3d.mp4</strong>.</p></div></div>`}
   };
   function open(key){const d=data[key];if(!d)return;kicker.textContent=d.kicker;title.textContent=d.title;intro.textContent=d.intro;body.innerHTML=d.html;modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.classList.add('service-modal-open');setTimeout(()=>modal.querySelector('.service-modal-close')?.focus(),30)}
   function close(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('service-modal-open')}
