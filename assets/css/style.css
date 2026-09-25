@@ -3,18 +3,6 @@
 \*-----------------------------------*/
 
 
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
 
   /**
@@ -2585,8 +2573,8 @@ body{
 }
 
 .vsv-brand img{
-  width:34px;
-  height:34px;
+  width:54px;
+  height:54px;
   border-radius:50%;
   object-fit:cover;
   border:1px solid rgba(246,201,93,.55);
@@ -2657,7 +2645,7 @@ body{
   display:inline-block;
   margin-bottom:22px;
   color:var(--vsv-gold);
-  font-size:10px;
+  font-size:20px;
   font-weight:600;
   letter-spacing:.28em;
 }
