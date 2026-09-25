@@ -2441,6 +2441,11 @@ body.service-modal-open{overflow:hidden}
   padding:50px 25px;
   text-align:center;
   color:#fff;
+  margin-inline:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
 }
 .vsv-video-hero__kicker{
   display:block;
@@ -2500,4 +2505,53 @@ body.service-modal-open{overflow:hidden}
   .vsv-video-hero__content{padding:35px 15px}
   .vsv-video-hero__content h2{letter-spacing:-1px}
   .vsv-video-hero__overlay{background:rgba(0,0,0,.62)}
+}
+
+/*-----------------------------------*
+  #VSV RESPONSIVE PROFILE + MODAL FIXES
+*-----------------------------------*/
+
+.vsv-profile{
+  width:min(190px,100%);
+  max-width:100%;
+  overflow:hidden;
+}
+.vsv-profile .sidebar-info{
+  width:100%;
+  min-width:0;
+  flex-direction:column;
+  align-items:center;
+}
+.vsv-profile .info-content{
+  width:100%;
+  min-width:0;
+}
+.vsv-profile .name{
+  max-width:100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.vsv-profile .visitas-box{
+  width:100%;
+  min-width:0;
+}
+.vsv-profile .visitas-box img{
+  display:block;
+  max-width:100%;
+  width:auto;
+  margin-inline:auto;
+}
+.service-modal-close{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0;
+}
+.service-modal-close::first-letter{line-height:1;}
+@media(max-width:700px){
+  .vsv-profile{width:190px;padding-inline:12px}
+  .vsv-profile .avatar-box{max-width:100%}
+  .vsv-profile .avatar-box img{max-width:100%}
+  .service-modal-close{right:10px;top:10px}
 }
