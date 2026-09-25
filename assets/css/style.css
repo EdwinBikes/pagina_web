@@ -3248,3 +3248,49 @@ body{
     flex-direction:column;
   }
 }
+
+
+/* Visitor counter beside Edwin Bikes */
+.vsv-visitor-counter{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin-left:7px;
+  padding-left:9px;
+  border-left:1px solid rgba(255,255,255,.12);
+  white-space:nowrap;
+  cursor:default;
+}
+
+.vsv-visitor-counter small{
+  color:#77777f;
+  font:500 8px Poppins,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.vsv-visitor-counter img{
+  width:auto!important;
+  height:16px!important;
+  max-width:90px;
+  object-fit:contain!important;
+  border:0!important;
+  border-radius:0!important;
+}
+
+@media(max-width:480px){
+  .vsv-visitor-counter{
+    margin-left:4px;
+    padding-left:6px;
+    gap:4px;
+  }
+
+  .vsv-visitor-counter small{
+    display:none;
+  }
+
+  .vsv-visitor-counter img{
+    max-width:72px;
+    height:14px!important;
+  }
+}
