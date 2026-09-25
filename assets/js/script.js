@@ -73,6 +73,31 @@ if (navbarList) {
   });
 }
 
+// Modern landing navigation.
+document.querySelectorAll("[data-nav-link]").forEach((button) => {
+  if (button.closest(".navbar-list")) return;
+
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const pageId = button.getAttribute("data-nav-link");
+    const navButton = document.querySelector('.navbar-link[data-nav-link="' + pageId + '"]');
+
+    showPage(pageId, navButton);
+
+    document.querySelectorAll(".vsv-modern-links button").forEach((link) => {
+      link.classList.toggle("active", link.getAttribute("data-nav-link") === pageId);
+    });
+
+    const target = document.querySelector('[data-page="' + pageId + '"]');
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+    }
+  });
+});
+
 // Service cards can navigate to another existing tab.
 document.querySelectorAll("[data-open-section]").forEach((card) => {
   card.addEventListener("click", () => {
