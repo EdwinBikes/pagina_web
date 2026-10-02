@@ -217,7 +217,8 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
     try{
       const u=new URL(url);
       if(u.hostname.replace(/^www\./,'').toLowerCase()!=='instagram.com') return null;
-      if(/^\\/(reel|p|tv)\\//.test(u.pathname)) return 'https://www.instagram.com'+u.pathname;
+      const path=u.pathname;
+      if(path.startsWith('/reel/')||path.startsWith('/p/')||path.startsWith('/tv/')) return 'https://www.instagram.com'+path;
     }catch(e){}
     return null;
   }
@@ -226,7 +227,7 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
     try{
       const u=new URL(url);
       if(u.hostname.replace(/^www\./,'').toLowerCase()!=='tiktok.com') return null;
-      if(/\\/video\\/\\d+/.test(u.pathname)) return 'https://www.tiktok.com'+u.pathname;
+      if(u.pathname.includes('/video/')) return 'https://www.tiktok.com'+u.pathname;
     }catch(e){}
     return null;
   }
@@ -271,7 +272,7 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
 
   function processSocialEmbeds(){
     if(window.instgrm&&window.instgrm.Embeds) window.instgrm.Embeds.process();
-    if(window.tiktokEmbed) window.tiktokEmbed.lib.render();
+    if(window.tiktokEmbed&&window.tiktokEmbed.lib&&typeof window.tiktokEmbed.lib.render==='function') window.tiktokEmbed.lib.render();
   }
 
   function renderSocialVideo(url,index){
