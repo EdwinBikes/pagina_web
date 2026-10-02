@@ -373,6 +373,7 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
       intro:'Estrategia, producción y gestión de contenido para marcas, negocios y proyectos comerciales.',
       html:
         '<p class="service-modal-text">Creo contenido a partir del trabajo real de una marca: procesos, productos, instalaciones, proyectos terminados, fotografía, reels y piezas pensadas para redes sociales.</p>'+
+        renderImageGallery('community')+
         renderVideoGallery('community')+
         '<div class="service-modal-actions"><a class="service-modal-btn" href="https://www.instagram.com/edwinbikes/" target="_blank" rel="noreferrer">Ver Instagram ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Hablar sobre un proyecto ↗</a></div>'
     },
