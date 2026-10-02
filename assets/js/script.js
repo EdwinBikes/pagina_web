@@ -165,9 +165,9 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
     developer:[
       "./assets/images/project-1.jpg",
       "./assets/images/project-2.png",
-      "./assets/images/project-3.jpg",
       "./assets/images/project-4.png",
-      "./assets/images/project-5.png"
+      "./assets/images/project-5.png",
+      "./assets/images/project-6.png"
     ],
     fpv:[
       "./assets/images/blog-1.jpg",
@@ -393,7 +393,7 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
           card('<img src="./assets/images/videos/gif.gif" alt="Widgets Examples">','APP','Widgets Examples','Proyecto de práctica y desarrollo para Android.','https://github.com/EdwinBikes')+
           card(galleryImages.developer[0]?'<img src="'+galleryImages.developer[0]+'" alt="House Motors">':'','APP','House Motors','Proyecto relacionado con el mundo automotriz.','https://github.com/EdwinBikes/house_motors')+
           card(galleryImages.developer[1]?'<img src="'+galleryImages.developer[1]+'" alt="Cinebikes">':'','FLUTTER','Cinebikes','Aplicación desarrollada con Flutter.','https://github.com/EdwinBikes')+
-          card(galleryImages.developer[2]?'<img src="'+galleryImages.developer[2]+'" alt="Portafolio">':'','WEB','Portafolio Edwin Bikes','Proyecto web y evolución del portafolio personal.','https://portfolio-edwinbikes.vercel.app/')+
+          card(galleryImages.developer[2]?'<img src="'+galleryImages.developer[2]+'" alt="Portafolio Edwin Bikes">':'','WEB','Portafolio Edwin Bikes','Proyecto web y evolución del portafolio personal.','https://portfolio-edwinbikes.vercel.app/')+
           card(galleryImages.developer[3]?'<img src="'+galleryImages.developer[3]+'" alt="Clone Netflix">':'','APP','Clone de Netflix','Proyecto de práctica de interfaz y desarrollo.','https://github.com/EdwinBikes')+
           card(galleryImages.developer[4]?'<img src="'+galleryImages.developer[4]+'" alt="Edwin Música">':'','FLUTTER','Edwin Música','Aplicación musical desarrollada con Flutter.','https://github.com/EdwinBikes')+
         '</div>'+
