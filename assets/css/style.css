@@ -2361,7 +2361,7 @@ main.vsv-main {
 .service-modal-header p{color:#a9a9af;font-size:12px;line-height:1.7;max-width:760px;margin:0}
 .service-modal-body{padding:25px 34px 32px}
 .service-modal-grid,.service-modal-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
-.service-modal-card{background:#202023;border:1px solid #2b2b2f;border-radius:10px;overflow:hidden}
+.service-modal-card{display:block;background:#202023;border:1px solid #2b2b2f;border-radius:10px;overflow:hidden}
 .service-modal-card img,.service-modal-card video{display:block;width:100%;height:190px;object-fit:cover;background:#0b0b0c}
 .service-modal-card-content{padding:13px 14px 15px}
 .service-modal-card-content small{display:block;color:#f6d36b;font-size:7px;letter-spacing:.14em;margin-bottom:4px}
