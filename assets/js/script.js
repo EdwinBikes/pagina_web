@@ -173,7 +173,7 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
       <div class="service-modal-grid">
         ${card('<img src="./assets/images/blog-1.jpg" alt="Ecoparque">','FPV','Ecoparque de Chinátá','Producción aérea en entorno natural.')}
         ${card('<img src="./assets/images/blog-2.jpg" alt="Renault 9">','AUTOMOTRIZ','Renault 9 + FPV','Proyecto automotriz con tomas FPV.')}
-        ${card('<img src="./assets/images/playlist.png" alt="Playlist FPV">','SHOWREEL','Videos FPV','Selección de trabajos publicados en YouTube.','https://youtube.com/@edwin-bikes')}
+        ${card('<video controls preload="metadata" playsinline><source src="./assets/videos/video.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video>','SHOWREEL','Videos FPV','Selección de trabajos publicados en YouTube.','https://youtube.com/@edwin-bikes')}
       </div>
       <div class="service-modal-actions"><a class="service-modal-btn" href="https://youtube.com/playlist?list=PLllYEQQooZSYgctQ5e1r3-467F3_5S8FN" target="_blank" rel="noreferrer">Ver playlist ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Cotizar producción ↗</a></div>`},
     '3d':{kicker:'04 / FABRICACIÓN',title:'Impresión 3D',intro:'Diseño, prototipado e impresión de piezas personalizadas, funcionales y creativas.',html:`
@@ -203,15 +203,15 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
   if(!video||!source) return;
 
   const videos={
-    default:"./assets/videos/hero.mp4",
-    community:"./assets/videos/community-manager.mp4",
-    developer:"./assets/videos/desarrollo.mp4",
-    fpv:"./assets/videos/drone-fpv.mp4",
-    "3d":"./assets/videos/impresion-3d.mp4",
-    resumen:"./assets/videos/desarrollo.mp4",
-    portafolio:"./assets/videos/hero.mp4",
-    blog:"./assets/videos/drone-fpv.mp4",
-    contactame:"./assets/videos/hero.mp4"
+    default:"./assets/videos/video.mp4",
+    community:"./assets/videos/video.mp4",
+    developer:"./assets/videos/video.mp4",
+    fpv:"./assets/videos/video.mp4",
+    "3d":"./assets/videos/video.mp4",
+    resumen:"./assets/videos/video.mp4",
+    portafolio:"./assets/videos/video.mp4",
+    blog:"./assets/videos/video.mp4",
+    contactame:"./assets/videos/video.mp4"
   };
 
   function setBackgroundVideo(key){
