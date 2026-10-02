@@ -136,7 +136,7 @@ window.changeSection = window.changeSection || ((sectionId) => showPage(sectionI
 window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
 
 /*-----------------------------------*
-  #SERVICE MODAL
+  #SERVICE MODAL + SOCIAL VIDEOS
 *-----------------------------------*/
 
 (function(){
@@ -147,49 +147,260 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
   const body=document.getElementById('serviceModalBody');
   const buttons=document.querySelectorAll('[data-service]');
   if(!modal||!title||!body) return;
-  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
-  const card=(media,label,name,text,link='')=>`<article class="service-modal-card">${media}<div class="service-modal-card-content"><small>${esc(label)}</small><h3>${esc(name)}</h3><p>${esc(text)}</p>${link?`<a href="${link}" target="_blank" rel="noreferrer">Ver proyecto ↗</a>`:''}</div></article>`;
-  const data={
-    community:{kicker:'01 / COMMUNITY MANAGER',title:'Community Manager',intro:'Estrategia, producción y gestión de contenido para marcas, negocios y proyectos comerciales.',html:`
-      <p class="service-modal-text">Creo contenido a partir del trabajo real de una marca: procesos, productos, instalaciones, proyectos terminados, fotografía, reels y piezas pensadas para redes sociales.</p>
-      <div class="service-modal-grid">
-        ${card('<img src="./assets/images/project-1.jpg" alt="Contenido automotriz">','AUTOMOTRIZ','Contenido comercial','Fotografía y piezas visuales para mostrar productos, vehículos y proyectos.')}
-        ${card('<img src="./assets/images/project-2.png" alt="Contenido digital">','REDES','Contenido para redes','Reels, publicaciones y piezas visuales adaptadas a plataformas digitales.')}
-        ${card('<img src="./assets/images/blog-2.jpg" alt="Producción audiovisual">','VIDEO','Producción audiovisual','Video y fotografía para comunicar el valor real de una empresa.')}
-      </div>
-      <div class="service-modal-actions"><a class="service-modal-btn" href="https://www.instagram.com/edwinbikes/" target="_blank" rel="noreferrer">Ver Instagram ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Hablar sobre un proyecto ↗</a></div>`},
-    developer:{kicker:'02 / DESARROLLO',title:'Desarrollador',intro:'Aplicaciones móviles, proyectos web y soluciones digitales desarrolladas a partir de ideas y necesidades concretas.',html:`
-      <p class="service-modal-text">Aquí se reúnen proyectos de desarrollo que forman parte de mi recorrido con Flutter, Dart, HTML, CSS, JavaScript y VBA.</p>
-      <div class="service-modal-projects">
-        ${card('<img src="./assets/images/videos/gif.gif" alt="Widgets Examples">','APP','Widgets Examples','Proyecto de práctica y desarrollo para Android.','https://github.com/EdwinBikes')}
-        ${card('<img src="./assets/images/project-1.jpg" alt="House Motors">','APP','House Motors','Proyecto relacionado con el mundo automotriz.','https://github.com/EdwinBikes/house_motors')}
-        ${card('<img src="./assets/images/project-2.png" alt="Cinebikes">','FLUTTER','Cinebikes','Aplicación desarrollada con Flutter.','https://github.com/EdwinBikes')}
-        ${card('<img src="./assets/images/project-3.jpg" alt="Portafolio">','WEB','Portafolio Edwin Bikes','Proyecto web y evolución del portafolio personal.','https://portfolio-edwinbikes.vercel.app/')}
-        ${card('<img src="./assets/images/project-4.png" alt="Clone Netflix">','APP','Clone de Netflix','Proyecto de práctica de interfaz y desarrollo.','https://github.com/EdwinBikes')}
-        ${card('<img src="./assets/images/project-5.png" alt="Edwin Música">','FLUTTER','Edwin Música','Aplicación musical desarrollada con Flutter.','https://github.com/EdwinBikes')}
-      </div>`},
-    fpv:{kicker:'03 / DRONE FPV',title:'Piloto de Drone FPV',intro:'Vuelos FPV y producción aérea para automotriz, inmobiliario, turismo, eventos y contenido comercial.',html:`
-      <p class="service-modal-text">El FPV es una herramienta narrativa: movimiento, velocidad y perspectiva para crear tomas que complementen la historia de un proyecto.</p>
-      <div class="service-modal-grid">
-        ${card('<img src="./assets/images/blog-1.jpg" alt="Ecoparque">','FPV','Ecoparque de Chinátá','Producción aérea en entorno natural.')}
-        ${card('<img src="./assets/images/blog-2.jpg" alt="Renault 9">','AUTOMOTRIZ','Renault 9 + FPV','Proyecto automotriz con tomas FPV.')}
-        ${card('<video controls preload="metadata" playsinline><source src="./assets/videos/video.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video>','SHOWREEL','Videos FPV','Selección de trabajos publicados en YouTube.','https://youtube.com/@edwin-bikes')}
-      </div>
-      <div class="service-modal-actions"><a class="service-modal-btn" href="https://youtube.com/playlist?list=PLllYEQQooZSYgctQ5e1r3-467F3_5S8FN" target="_blank" rel="noreferrer">Ver playlist ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Cotizar producción ↗</a></div>`},
-    '3d':{kicker:'04 / FABRICACIÓN',title:'Impresión 3D',intro:'Diseño, prototipado e impresión de piezas personalizadas, funcionales y creativas.',html:`
-      <p class="service-modal-text">Esta sección está preparada para mostrar fotografías y videos reales de los artículos impresos: desde el diseño y la preparación hasta la pieza terminada.</p>
-      <div class="service-modal-grid">
-        ${card('<img src="./assets/images/project-5.png" alt="Impresión 3D">','IMPRESIÓN','Pieza personalizada','Galería de artículos y piezas impresas.')}
-        ${card('<img src="./assets/images/project-7.png" alt="Prototipo 3D">','PROTOTIPO','Diseño y prototipado','Modelos, pruebas y piezas funcionales.')}
-        ${card('<img src="./assets/images/project-9.png" alt="Pieza terminada">','FINAL','Pieza terminada','Fotografías reales del resultado final.')}
-      </div>
-      <div class="service-modal-card" style="margin-top:13px"><video controls preload="metadata" href="https://www.youtube.com/embed/bt7FfQpbIvk?si=t3PSJZYipEb6LGVY" autoplay; clipboard-write; gyroscope; picture-in-picture;"><source src="./assets/videos/video.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><div class="service-modal-card-content"><small>VIDEO</small><h3>Proceso de impresión</h3><p>Cuando tengas el video real, guárdalo como <strong>assets/videos/impresion3d.mp4</strong>.</p></div></div>`}
+
+  /*
+    SOLO NECESITAS EDITAR ESTA LISTA.
+    Puedes pegar enlaces de YouTube, Instagram o TikTok.
+  */
+  const videos={
+    fpv:[
+      "https://youtu.be/bt7FfQpbIvk",
+      "https://youtu.be/D-hYdWwSdtY",
+      "https://youtu.be/ImACEWQ0Gs0",
+      "https://www.instagram.com/p/C3A-GePuWY-/"
+    ],
+
+    community:[
+      "https://www.instagram.com/p/DVJ2Yu7gAHX/",
+      "https://www.instagram.com/p/DcHXtKHv4s7/",
+      "https://www.tiktok.com/@edwinbikes/video/7242420768716442886",
+      "https://www.tiktok.com/@el.chef.del.tolima/video/7577919353467817223"
+    ],
+
+    developer:[
+      "https://www.instagram.com/p/CcuHomcu0P8/",
+      "https://www.instagram.com/p/C4BXJO9OtWI/",
+      "https://www.instagram.com/p/DGYvxrRx2Jw/"
+    ],
+
+    "3d":[
+      "https://www.instagram.com/p/C6CFE_IuznO/",
+      "https://www.instagram.com/p/CzbdqwOOgsr/"
+    ]
   };
-  function open(key){const d=data[key];if(!d)return;kicker.textContent=d.kicker;title.textContent=d.title;intro.textContent=d.intro;body.innerHTML=d.html;modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.classList.add('service-modal-open');setTimeout(()=>modal.querySelector('.service-modal-close')?.focus(),30)}
-  function close(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('service-modal-open')}
+
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+
+  const card=(media,label,name,text,link='') =>
+    '<article class="service-modal-card">'+media+
+    '<div class="service-modal-card-content">'+
+    '<small>'+esc(label)+'</small>'+
+    '<h3>'+esc(name)+'</h3>'+
+    '<p>'+esc(text)+'</p>'+
+    (link?'<a href="'+esc(link)+'" target="_blank" rel="noreferrer">Ver proyecto ↗</a>':'')+
+    '</div></article>';
+
+  function youtubeId(url){
+    try{
+      const u=new URL(url);
+      if(u.hostname==='youtu.be') return u.pathname.split('/').filter(Boolean)[0]||null;
+      if(u.hostname.includes('youtube.com')){
+        if(u.pathname==='/watch') return u.searchParams.get('v');
+        const parts=u.pathname.split('/').filter(Boolean);
+        if(parts[0]==='shorts'||parts[0]==='embed') return parts[1]||null;
+      }
+    }catch(e){}
+    return null;
+  }
+
+  function socialType(url){
+    try{
+      const host=new URL(url).hostname.replace(/^www\./,'').toLowerCase();
+      if(host==='youtube.com'||host==='youtu.be') return 'youtube';
+      if(host==='instagram.com') return 'instagram';
+      if(host==='tiktok.com') return 'tiktok';
+    }catch(e){}
+    return 'unknown';
+  }
+
+  function instagramPermalink(url){
+    try{
+      const u=new URL(url);
+      if(u.hostname.replace(/^www\./,'').toLowerCase()!=='instagram.com') return null;
+      if(/^\\/(reel|p|tv)\\//.test(u.pathname)) return 'https://www.instagram.com'+u.pathname;
+    }catch(e){}
+    return null;
+  }
+
+  function tiktokPermalink(url){
+    try{
+      const u=new URL(url);
+      if(u.hostname.replace(/^www\./,'').toLowerCase()!=='tiktok.com') return null;
+      if(/\\/video\\/\\d+/.test(u.pathname)) return 'https://www.tiktok.com'+u.pathname;
+    }catch(e){}
+    return null;
+  }
+
+  function youtubeEmbed(url){
+    const id=youtubeId(url);
+    if(!id) return null;
+
+    return '<div class="vsv-social-video vsv-youtube-video">'+
+      '<iframe src="https://www.youtube.com/embed/'+encodeURIComponent(id)+'?rel=0&playsinline=1" '+
+      'title="Video de YouTube" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'+
+      '</div>';
+  }
+
+  function instagramEmbed(url){
+    const permalink=instagramPermalink(url);
+    if(!permalink) return null;
+
+    return '<div class="vsv-social-video vsv-instagram-video">'+
+      '<blockquote class="instagram-media" data-instgrm-permalink="'+esc(permalink)+'" data-instgrm-version="14" style="background:#111; border:0; margin:0 auto; max-width:540px; min-width:326px; width:calc(100% - 20px);"></blockquote>'+
+      '</div>';
+  }
+
+  function tiktokEmbed(url){
+    const permalink=tiktokPermalink(url);
+    if(!permalink) return null;
+
+    return '<div class="vsv-social-video vsv-tiktok-video">'+
+      '<blockquote class="tiktok-embed" cite="'+esc(permalink)+'" data-video-id="'+esc(permalink.split('/').pop())+'" style="max-width:605px;min-width:325px;margin:0 auto;">'+
+      '<section><a target="_blank" href="'+esc(permalink)+'">Ver video en TikTok</a></section></blockquote>'+
+      '</div>';
+  }
+
+  function loadExternalScript(src,id){
+    if(document.getElementById(id)) return;
+    const script=document.createElement('script');
+    script.id=id;
+    script.async=true;
+    script.src=src;
+    document.body.appendChild(script);
+  }
+
+  function processSocialEmbeds(){
+    if(window.instgrm&&window.instgrm.Embeds) window.instgrm.Embeds.process();
+    if(window.tiktokEmbed) window.tiktokEmbed.lib.render();
+  }
+
+  function renderSocialVideo(url,index){
+    const type=socialType(url);
+
+    if(type==='youtube') return youtubeEmbed(url)||fallbackVideo(url,index);
+    if(type==='instagram') return instagramEmbed(url)||fallbackVideo(url,index);
+    if(type==='tiktok') return tiktokEmbed(url)||fallbackVideo(url,index);
+
+    return fallbackVideo(url,index);
+  }
+
+  function fallbackVideo(url,index){
+    return '<article class="service-modal-card vsv-link-card">'+
+      '<div class="service-modal-card-content">'+
+      '<small>VIDEO '+String(index+1).padStart(2,'0')+'</small>'+
+      '<h3>Contenido externo</h3>'+
+      '<p>Este enlace no pudo convertirse automáticamente en un reproductor.</p>'+
+      '<a href="'+esc(url)+'" target="_blank" rel="noreferrer">Abrir video ↗</a>'+
+      '</div></article>';
+  }
+
+  function renderVideoGallery(key){
+    const list=Array.isArray(videos[key])?videos[key]:[];
+
+    if(!list.length){
+      return '<p class="service-modal-text">Próximamente encontrarás aquí videos y trabajos de esta especialidad.</p>';
+    }
+
+    return '<div class="vsv-social-video-grid">'+
+      list.map((url,index)=>renderSocialVideo(url,index)).join('')+
+      '</div>';
+  }
+
+  function loadEmbedLibraries(){
+    if(videos.instagram?.length||Object.values(videos).flat().some(url=>socialType(url)==='instagram')){
+      loadExternalScript('https://www.instagram.com/embed.js','vsv-instagram-embed-script');
+    }
+
+    if(Object.values(videos).flat().some(url=>socialType(url)==='tiktok')){
+      loadExternalScript('https://www.tiktok.com/embed.js','vsv-tiktok-embed-script');
+    }
+  }
+
+  const data={
+    community:{
+      kicker:'01 / COMMUNITY MANAGER',
+      title:'Community Manager',
+      intro:'Estrategia, producción y gestión de contenido para marcas, negocios y proyectos comerciales.',
+      html:
+        '<p class="service-modal-text">Creo contenido a partir del trabajo real de una marca: procesos, productos, instalaciones, proyectos terminados, fotografía, reels y piezas pensadas para redes sociales.</p>'+
+        renderVideoGallery('community')+
+        '<div class="service-modal-actions"><a class="service-modal-btn" href="https://www.instagram.com/edwinbikes/" target="_blank" rel="noreferrer">Ver Instagram ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Hablar sobre un proyecto ↗</a></div>'
+    },
+
+    developer:{
+      kicker:'02 / DESARROLLO',
+      title:'Desarrollador',
+      intro:'Aplicaciones móviles, proyectos web y soluciones digitales desarrolladas a partir de ideas y necesidades concretas.',
+      html:
+        '<p class="service-modal-text">Aquí se reúnen proyectos de desarrollo que forman parte de mi recorrido con Flutter, Dart, HTML, CSS, JavaScript y VBA.</p>'+
+        '<div class="service-modal-projects">'+
+          card('<img src="./assets/images/videos/gif.gif" alt="Widgets Examples">','APP','Widgets Examples','Proyecto de práctica y desarrollo para Android.','https://github.com/EdwinBikes')+
+          card('<img src="./assets/images/project-1.jpg" alt="House Motors">','APP','House Motors','Proyecto relacionado con el mundo automotriz.','https://github.com/EdwinBikes/house_motors')+
+          card('<img src="./assets/images/project-2.png" alt="Cinebikes">','FLUTTER','Cinebikes','Aplicación desarrollada con Flutter.','https://github.com/EdwinBikes')+
+          card('<img src="./assets/images/project-3.jpg" alt="Portafolio">','WEB','Portafolio Edwin Bikes','Proyecto web y evolución del portafolio personal.','https://portfolio-edwinbikes.vercel.app/')+
+          card('<img src="./assets/images/project-4.png" alt="Clone Netflix">','APP','Clone de Netflix','Proyecto de práctica de interfaz y desarrollo.','https://github.com/EdwinBikes')+
+          card('<img src="./assets/images/project-5.png" alt="Edwin Música">','FLUTTER','Edwin Música','Aplicación musical desarrollada con Flutter.','https://github.com/EdwinBikes')+
+        '</div>'+
+        '<div style="margin-top:20px">'+renderVideoGallery('developer')+'</div>'
+    },
+
+    fpv:{
+      kicker:'03 / DRONE FPV',
+      title:'Piloto de Drone FPV',
+      intro:'Vuelos FPV y producción aérea para automotriz, inmobiliario, turismo, eventos y contenido comercial.',
+      html:
+        '<p class="service-modal-text">El FPV es una herramienta narrativa: movimiento, velocidad y perspectiva para crear tomas que complementen la historia de un proyecto.</p>'+
+        '<div class="service-modal-grid">'+
+          card('<img src="./assets/images/blog-1.jpg" alt="Ecoparque">','FPV','Ecoparque de Chinátá','Producción aérea en entorno natural.')+
+          card('<img src="./assets/images/blog-2.jpg" alt="Renault 9">','AUTOMOTRIZ','Renault 9 + FPV','Proyecto automotriz con tomas FPV.')+
+        '</div>'+
+        '<div style="margin-top:20px">'+renderVideoGallery('fpv')+'</div>'+
+        '<div class="service-modal-actions"><a class="service-modal-btn" href="https://youtube.com/playlist?list=PLllYEQQooZSYgctQ5e1r3-467F3_5S8FN" target="_blank" rel="noreferrer">Ver playlist ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Cotizar producción ↗</a></div>'
+    },
+
+    '3d':{
+      kicker:'04 / FABRICACIÓN',
+      title:'Impresión 3D',
+      intro:'Diseño, prototipado e impresión de piezas personalizadas, funcionales y creativas.',
+      html:
+        '<p class="service-modal-text">Esta sección está preparada para mostrar fotografías y videos reales de los artículos impresos: desde el diseño y la preparación hasta la pieza terminada.</p>'+
+        '<div class="service-modal-grid">'+
+          card('<img src="./assets/images/project-5.png" alt="Impresión 3D">','IMPRESIÓN','Pieza personalizada','Galería de artículos y piezas impresas.')+
+          card('<img src="./assets/images/project-7.png" alt="Prototipo 3D">','PROTOTIPO','Diseño y prototipado','Modelos, pruebas y piezas funcionales.')+
+          card('<img src="./assets/images/project-9.png" alt="Pieza terminada">','FINAL','Pieza terminada','Fotografías reales del resultado final.')+
+        '</div>'+
+        '<div style="margin-top:20px">'+renderVideoGallery('3d')+'</div>'
+    }
+  };
+
+  function open(key){
+    const d=data[key];
+    if(!d)return;
+
+    kicker.textContent=d.kicker;
+    title.textContent=d.title;
+    intro.textContent=d.intro;
+    body.innerHTML=d.html;
+
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('service-modal-open');
+
+    processSocialEmbeds();
+    setTimeout(()=>modal.querySelector('.service-modal-close')?.focus(),30);
+  }
+
+  function close(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.classList.remove('service-modal-open');
+  }
+
   buttons.forEach(b=>b.addEventListener('click',()=>open(b.dataset.service)));
   modal.querySelectorAll('[data-service-close]').forEach(el=>el.addEventListener('click',close));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))close()});
+
+  loadEmbedLibraries();
 })();
 
 /*-----------------------------------*
