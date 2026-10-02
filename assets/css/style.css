@@ -2882,7 +2882,7 @@ body{
 .vsv-content-inner .about-text{padding-bottom:0}
 .vsv-content-inner .about-text p{max-width:850px;color:#b7b7bd;font-size:14px;line-height:1.8;margin:0 0 16px}
 .vsv-content-inner .about-text p:last-child{margin-bottom:0}
-.vsv-content-inner>article.acerca-de-mi{padding-top:34px;padding-bottom:28px}
+.vsv-content-inner>article.acerca-de-mi{padding-top:34px;padding-bottom:2px}
 
 .vsv-contact-strip{display:flex!important;justify-content:center;align-items:stretch;gap:15px;margin:0 0 25px}
 .vsv-contact-strip .contact-item{flex:0 1 300px;max-width:300px;border:1px solid var(--vsv-border);border-radius:14px;background:rgba(17,17,19,.75);padding:22px}
