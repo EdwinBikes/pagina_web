@@ -174,9 +174,12 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
       "./assets/images/blog-2.jpg"
     ],
     "3d":[
-      "./assets/images/project-5.png",
-      "./assets/images/project-7.png",
-      "./assets/images/project-9.png"
+      "./assets/images/3d.png",
+      "./assets/images/3d2.png",
+      "./assets/images/3d3.png",
+      "./assets/images/3d4.png",
+      "./assets/images/3d5.png",
+      "./assets/images/3d6.jpeg"
     ]
   };
 
