@@ -184,15 +184,17 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
     fpv:[
       "https://youtu.be/bt7FfQpbIvk",
       "https://youtu.be/D-hYdWwSdtY",
-      "https://youtu.be/ImACEWQ0Gs0",
-      "https://www.instagram.com/p/C3A-GePuWY-/"
+      "https://www.instagram.com/p/DQKcgj1DA3P/",
+      "https://www.instagram.com/p/C3A-GePuWY-/",
+      "https://www.instagram.com/p/DP0JkcuDMp3/"
     ],
 
     community:[
       "https://www.instagram.com/p/DVJ2Yu7gAHX/",
       "https://www.instagram.com/p/DcHXtKHv4s7/",
-      "https://www.tiktok.com/@edwinbikes/video/7242420768716442886",
-      "https://www.tiktok.com/@el.chef.del.tolima/video/7577919353467817223"
+      "https://www.instagram.com/p/DROQ5OViugO/",
+      "https://www.instagram.com/p/DROPF8Ziktm/",
+      "https://www.instagram.com/p/DBrCpj-qzIH/"
     ],
 
     developer:[
