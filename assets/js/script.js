@@ -465,8 +465,11 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
       '.vsv-youtube-video iframe{display:block;width:100%;height:100%;border:0;}'+
       '.vsv-instagram-video,.vsv-tiktok-video{display:flex;justify-content:center;align-items:flex-start;min-height:420px;background:transparent;padding:0;}'+
       '.vsv-instagram-video blockquote,.vsv-tiktok-video blockquote{margin:0 auto!important;background:transparent!important;border:0!important;}'+
+      '.vsv-reference-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0;}'+
+      '.vsv-reference-image{margin:0;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,.08);}'+
+      '.vsv-reference-image img{display:block;width:100%;height:100%;object-fit:cover;}'+
       '.vsv-link-card{min-height:180px;}'+
-      '@media(max-width:700px){.vsv-social-video-grid{grid-template-columns:1fr;}.vsv-instagram-video,.vsv-tiktok-video{min-height:0;}}';
+      '@media(max-width:700px){.vsv-social-video-grid{grid-template-columns:1fr;}.vsv-instagram-video,.vsv-tiktok-video{min-height:0;}.vsv-reference-gallery{grid-template-columns:1fr;}}';
 
     document.head.appendChild(style);
   }
