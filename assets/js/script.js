@@ -131,13 +131,9 @@ if (form) form.addEventListener("submit", (e) => {
   form.reset();
 });
 
-// Compatibility with legacy inline handlers.
 window.changeSection = window.changeSection || ((sectionId) => showPage(sectionId));
 window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
 
-/*-----------------------------------*
-  #SERVICE MODAL + SOCIAL VIDEOS
-*-----------------------------------*/
 
 (function(){
   const modal=document.getElementById('serviceModal');
@@ -148,41 +144,7 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
   const buttons=document.querySelectorAll('[data-service]');
   if(!modal||!title||!body) return;
 
-  /*
-    SOLO NECESITAS EDITAR ESTA LISTA.
-    Puedes pegar enlaces de YouTube, Instagram o TikTok.
-  */
-  // ============================================================
-  // IMÁGENES DE REFERENCIA
-  // Cuando subas tus fotos nuevas, cambia SOLO estas rutas.
-  // ============================================================
-  const galleryImages={
-    community:[
-      "./assets/images/project-3.jpg",
-      "./assets/images/project-1.jpg",
-      "./assets/images/project-2.png"
-    ],
-    developer:[
-      "./assets/images/project-1.jpg",
-      "./assets/images/project-2.png",
-      "./assets/images/project-4.png",
-      "./assets/images/project-5.png",
-      "./assets/images/project-7.png"
-    ],
-    fpv:[
-      "./assets/images/blog-1.jpg",
-      "./assets/images/blog-2.jpg"
-    ],
-    "3d":[
-      "./assets/images/3d.png",
-      "./assets/images/3d2.png",
-      "./assets/images/3d3.png",
-      "./assets/images/3d4.png",
-      "./assets/images/3d5.png",
-      "./assets/images/3d6.jpeg"
-    ]
-  };
-
+  
   const videos={
     fpv:[
       "https://youtu.be/bt7FfQpbIvk",
@@ -423,9 +385,13 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
         '<p class="service-modal-text">Esta sección está preparada para mostrar fotografías y videos reales de los artículos impresos: desde el diseño y la preparación hasta la pieza terminada.</p>'+
         renderImageGallery('3d')+
         '<div class="service-modal-grid">'+
-          card('<img src="'+galleryImages["3d"][0]+'" alt="Impresión 3D">','IMPRESIÓN','Pieza personalizada','Galería de artículos y piezas impresas.')+
-          card('<img src="'+galleryImages["3d"][1]+'" alt="Prototipo 3D">','PROTOTIPO','Diseño y prototipado','Modelos, pruebas y piezas funcionales.')+
-          card('<img src="'+galleryImages["3d"][2]+'" alt="Pieza terminada">','FINAL','Pieza terminada','Fotografías reales del resultado final.')+
+          card('<img src="'+galleryImages["3d"][1]+'" alt="Impresión 3D">','IMPRESIÓN','Pieza personalizada','Galería de artículos y piezas impresas.')+
+          card('<img src="'+galleryImages["3d"][0]+'" alt="Prototipo 3D">','PROTOTIPO','Diseño y prototipado','Modelos, pruebas y piezas funcionales.')+
+          card('<img src="'+galleryImages["3d"][6]+'" alt="Pieza terminada">','FINAL','Pieza terminada','Fotografías reales del resultado final.')+
+          card('<img src="'+galleryImages["3d"][2]+'" alt="Pieza detallada">','DISEÑADA','Pieza diseñada','Fotografías de la pieza impresa.')+
+          card('<img src="'+galleryImages["3d"][3]+'" alt="Pieza detallada">','DISEÑADA','Pieza diseñada','Fotografías de la pieza impresa.')+
+          card('<img src="'+galleryImages["3d"][4]+'" alt="Pieza detallada">','DISEÑADA','Pieza diseñada','Fotografías de la pieza impresa.')+
+          card('<img src="'+galleryImages["3d"][5]+'" alt="Pieza detallada">','DISEÑADA','Pieza diseñada','Fotografías de la pieza impresa.')+
         '</div>'+
         '<div style="margin-top:20px">'+renderVideoGallery('3d')+'</div>'
     }
