@@ -389,9 +389,9 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
           card('<img src="'+galleryImages["3d"][0]+'" alt="Prototipo 3D">','PROTOTIPO','Diseño y prototipado','Modelos, pruebas y piezas funcionales.')+
           card('<img src="'+galleryImages["3d"][6]+'" alt="Pieza terminada">','FINAL','Pieza terminada','Fotografías reales del resultado final.')+
           card('<img src="'+galleryImages["3d"][2]+'" alt="Pieza detallada">','DISEÑADA','Pieza diseñada','Fotografías de la pieza impresa.')+
-          card('<img src="'+galleryImages["3d"][3]+'" alt="Pieza detallada">','DISEÑADA','Pieza diseñada','Fotografías de la pieza impresa.')+
-          card('<img src="'+galleryImages["3d"][4]+'" alt="Pieza detallada">','DISEÑADA','Pieza diseñada','Fotografías de la pieza impresa.')+
-          card('<img src="'+galleryImages["3d"][5]+'" alt="Pieza detallada">','DISEÑADA','Pieza diseñada','Fotografías de la pieza impresa.')+
+          card('<img src="'+galleryImages["3d"][3]+'" alt="Pieza detallada">','Motor k20','Por partes','bloque, multiple header.')+
+          card('<img src="'+galleryImages["3d"][4]+'" alt="Pieza detallada">','motor b18','Completo','Tapa valvulas separada del bloque.')+
+          card('<img src="'+galleryImages["3d"][5]+'" alt="Pieza detallada">','motor b16','Piezas diseñadas','todas las partes independientes.')+
         '</div>'+
         '<div style="margin-top:20px">'+renderVideoGallery('3d')+'</div>'
     }
