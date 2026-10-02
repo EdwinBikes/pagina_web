@@ -167,7 +167,7 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
       "./assets/images/project-2.png",
       "./assets/images/project-4.png",
       "./assets/images/project-5.png",
-      "./assets/images/project-6.png"
+      "./assets/images/project-7.png"
     ],
     fpv:[
       "./assets/images/blog-1.jpg",
