@@ -400,6 +400,25 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
   modal.querySelectorAll('[data-service-close]').forEach(el=>el.addEventListener('click',close));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))close()});
 
+  function injectSocialEmbedStyles(){
+    if(document.getElementById('vsv-social-embed-styles')) return;
+
+    const style=document.createElement('style');
+    style.id='vsv-social-embed-styles';
+    style.textContent=
+      '.vsv-social-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px;align-items:start;}'+
+      '.vsv-social-video{width:100%;border-radius:12px;overflow:hidden;background:#111;min-width:0;}'+
+      '.vsv-youtube-video{aspect-ratio:16/9;}'+
+      '.vsv-youtube-video iframe{display:block;width:100%;height:100%;border:0;}'+
+      '.vsv-instagram-video,.vsv-tiktok-video{display:flex;justify-content:center;align-items:flex-start;min-height:420px;background:#111;padding:4px;}'+
+      '.vsv-instagram-video blockquote,.vsv-tiktok-video blockquote{margin:0 auto!important;}'+
+      '.vsv-link-card{min-height:180px;}'+
+      '@media(max-width:700px){.vsv-social-video-grid{grid-template-columns:1fr;}.vsv-instagram-video,.vsv-tiktok-video{min-height:0;}}';
+
+    document.head.appendChild(style);
+  }
+
+  injectSocialEmbedStyles();
   loadEmbedLibraries();
 })();
 
