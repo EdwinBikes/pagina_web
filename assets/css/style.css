@@ -3333,3 +3333,112 @@ body{
 
 @media(max-width:760px){.vsv-contact-strip{display:flex!important;flex-wrap:wrap;justify-content:center;gap:10px!important}.vsv-contact-strip .contact-item{flex:0 1 280px;max-width:280px}}
 @media(max-width:480px){.vsv-contact-strip .contact-item{flex:1 1 100%;max-width:100%}}
+
+
+/*-----------------------------------*
+  #SERVICE MODAL PROJECT CARDS RESPONSIVE
+*-----------------------------------*/
+
+.service-modal-grid,
+.service-modal-projects{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  width:100%;
+  margin:24px 0 0;
+  align-items:stretch;
+}
+
+.service-modal-card{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  width:100%;
+  height:100%;
+  box-sizing:border-box;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:12px;
+  background:#202023;
+}
+
+.service-modal-card > img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  background:#111;
+}
+
+.service-modal-card-content{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  min-width:0;
+  padding:17px 17px 18px;
+}
+
+.service-modal-card-content small{
+  display:block;
+  margin-bottom:7px;
+  color:#f6d36b;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.08em;
+}
+
+.service-modal-card-content h3{
+  margin:0 0 8px;
+  color:#fff;
+  font-size:15px;
+  line-height:1.3;
+}
+
+.service-modal-card-content p{
+  margin:0 0 13px;
+  color:#9999a1;
+  font-size:10px;
+  line-height:1.65;
+}
+
+.service-modal-card-content a{
+  margin-top:auto;
+  color:#f6d36b;
+  font-size:10px;
+  text-decoration:none;
+}
+
+.service-modal-card-content a:hover{
+  text-decoration:underline;
+}
+
+@media(max-width:1000px){
+  .service-modal-grid,
+  .service-modal-projects{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:15px;
+  }
+}
+
+@media(max-width:620px){
+  .service-modal-grid,
+  .service-modal-projects{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .service-modal-card > img{
+    aspect-ratio:16/10;
+  }
+
+  .service-modal-card-content{
+    padding:15px;
+  }
+}
+
+@media(max-width:380px){
+  .service-modal-card > img{
+    aspect-ratio:4/3;
+  }
+}
