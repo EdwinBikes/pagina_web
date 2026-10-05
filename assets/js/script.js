@@ -400,8 +400,8 @@ function renderImageGallery(key){
       html:
         '<p class="service-modal-text">El FPV es una herramienta narrativa: movimiento, velocidad y perspectiva para crear tomas que complementen la historia de un proyecto.</p>'+
         '<div class="service-modal-grid">'+
-          card('<img src="'+galleryImages.fpv[0]+'" alt="Ecoparque">','FPV','Ecoparque de Chinátá','Producción aérea en entorno natural.')+
-          card('<img src="'+galleryImages.fpv[1]+'" alt="Renault 9">','AUTOMOTRIZ','Renault 9 + FPV','Proyecto automotriz con tomas FPV.')+
+          card('<img src="'+galleryImages.fpv[0]+'" alt="Drone FPV">','Equipo','Drone, gafas, cámara externa','Es una aeronave dinñamica que transmite video en tiempo real hacia las gafas del piloto.')+
+          card('<img src="'+galleryImages.fpv[1]+'" alt="Drone convencional">','Equipo','Control y drone','Es una aeronave que vuela de forma autónoma y estable para capturar fotos o video de manera sencilla.')+
         '</div>'+
         '<div style="margin-top:20px">'+renderVideoGallery('fpv')+'</div>'+
         '<div class="service-modal-actions"><a class="service-modal-btn" href="https://youtube.com/playlist?list=PLllYEQQooZSYgctQ5e1r3-467F3_5S8FN" target="_blank" rel="noreferrer">Ver playlist ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Cotizar producción ↗</a></div>'
@@ -420,7 +420,6 @@ function renderImageGallery(key){
           card('<img src="'+galleryImages["3d"][2]+'" alt="Pieza detallada">','DISEÑADA','Pieza diseñada','Fotografías de la pieza impresa.')+
           card('<img src="'+galleryImages["3d"][3]+'" alt="Pieza detallada">','Motor k20','Por partes','bloque, multiple header.')+
           card('<img src="'+galleryImages["3d"][4]+'" alt="Pieza detallada">','motor b18','Completo','Tapa valvulas separada del bloque.')+
-          card('<img src="'+galleryImages["3d"][5]+'" alt="Pieza detallada">','motor b16','Piezas diseñadas','todas las partes independientes.')+
         '</div>'+
         '<div style="margin-top:20px">'+renderVideoGallery('3d')+'</div>'
     }
