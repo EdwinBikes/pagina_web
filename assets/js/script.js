@@ -147,9 +147,12 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
   
   const galleryImages={
     community:[
-      "./assets/images/project-3.jpg",
-      "./assets/images/project-1.jpg",
-      "./assets/images/project-2.png"
+      "./assets/images/cmm-1.jpg",
+      "./assets/images/cmm-2.jpg",
+      "./assets/images/cmm-3.png",
+      "./assets/images/cmm-4.jpg",
+      "./assets/images/cmm-5.jpg",
+      "./assets/images/cmm-6.png"
     ],
     developer:[
       "./assets/images/project-1.jpg",
@@ -368,10 +371,14 @@ function renderImageGallery(key){
       html:
         '<p class="service-modal-text">Creo contenido a partir del trabajo real de una marca: procesos, productos, instalaciones, proyectos terminados, fotografía, reels y piezas pensadas para redes sociales.</p>'+
         '<div class="service-modal-grid">'+
-          card('<img src="'+galleryImages.community[0]+'" alt="Community Manager">','CONTENIDO','Gestión de contenido','Producción de contenido para marcas y negocios.')+
-          card('<img src="'+galleryImages.community[1]+'" alt="Producción audiovisual">','REDES','Contenido para redes','Fotografía, reels y piezas pensadas para redes sociales.')+
-          card('<img src="'+galleryImages.community[2]+'" alt="Contenido comercial">','ESTRATEGIA','Contenido comercial','Piezas visuales orientadas a comunicación y ventas.')+
-        '</div>'+
+          card('<img src="'+galleryImages.community[0]+'" alt="Community Manager">','Luxor Arquitectos','Creación de contenido','Producción y gestión de contenido para todas las redes sociales.')+
+          card('<img src="'+galleryImages.community[1]+'" alt="Producción audiovisual">','Ferest Salud IPS','Contenido para Página WEB','Fotografía, video corporativo y flyers informativos.')+
+          card('<img src="'+galleryImages.community[2]+'" alt="Contenido comercial">','Castor Suspensiones','Creación de contenido','Piezas visuales orientadas a comunicación y ventas de autopartes para redes sociales con pauta.')+
+          card('<img src="'+galleryImages.community[3]+'" alt="Producción audiovisual">','Chef del Tolima','Contenido de Página WEB','Fotografía, manejo completo de redes sociales, pauta y creación de contenido.')+
+          card('<img src="'+galleryImages.community[4]+'" alt="Producción audiovisual">','Hotel la puerta del sol','Venta de lotes','Video con drones y fotografía aereas de los terrenos.')+
+          card('<img src="'+galleryImages.community[5]+'" alt="servicios personales">','Clientes de inmoviliarias','Inmoviliarias','Video con drones, flyers informativos y fotografía aereas de los terrenos .')+
+          
+          '</div>'+
         renderVideoGallery('community')+
         '<div class="service-modal-actions"><a class="service-modal-btn" href="https://www.instagram.com/edwinbikes/" target="_blank" rel="noreferrer">Ver Instagram ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Hablar sobre un proyecto ↗</a></div>'
     },
