@@ -367,7 +367,11 @@ function renderImageGallery(key){
       intro:'Estrategia, producción y gestión de contenido para marcas, negocios y proyectos comerciales.',
       html:
         '<p class="service-modal-text">Creo contenido a partir del trabajo real de una marca: procesos, productos, instalaciones, proyectos terminados, fotografía, reels y piezas pensadas para redes sociales.</p>'+
-        renderImageGallery('community')+
+        '<div class="service-modal-grid">'+
+          card('<img src="'+galleryImages.community[0]+'" alt="Community Manager">','CONTENIDO','Gestión de contenido','Producción de contenido para marcas y negocios.')+
+          card('<img src="'+galleryImages.community[1]+'" alt="Producción audiovisual">','REDES','Contenido para redes','Fotografía, reels y piezas pensadas para redes sociales.')+
+          card('<img src="'+galleryImages.community[2]+'" alt="Contenido comercial">','ESTRATEGIA','Contenido comercial','Piezas visuales orientadas a comunicación y ventas.')+
+        '</div>'+
         renderVideoGallery('community')+
         '<div class="service-modal-actions"><a class="service-modal-btn" href="https://www.instagram.com/edwinbikes/" target="_blank" rel="noreferrer">Ver Instagram ↗</a><a class="service-modal-btn" href="https://wa.me/573057135213" target="_blank" rel="noreferrer">Hablar sobre un proyecto ↗</a></div>'
     },
@@ -395,7 +399,6 @@ function renderImageGallery(key){
       intro:'Vuelos FPV y producción aérea para automotriz, inmobiliario, turismo, eventos y contenido comercial.',
       html:
         '<p class="service-modal-text">El FPV es una herramienta narrativa: movimiento, velocidad y perspectiva para crear tomas que complementen la historia de un proyecto.</p>'+
-        renderImageGallery('fpv')+
         '<div class="service-modal-grid">'+
           card('<img src="'+galleryImages.fpv[0]+'" alt="Ecoparque">','FPV','Ecoparque de Chinátá','Producción aérea en entorno natural.')+
           card('<img src="'+galleryImages.fpv[1]+'" alt="Renault 9">','AUTOMOTRIZ','Renault 9 + FPV','Proyecto automotriz con tomas FPV.')+
@@ -410,7 +413,6 @@ function renderImageGallery(key){
       intro:'Diseño, prototipado e impresión de piezas personalizadas, funcionales y creativas.',
       html:
         '<p class="service-modal-text">Esta sección está preparada para mostrar fotografías y videos reales de los artículos impresos: desde el diseño y la preparación hasta la pieza terminada.</p>'+
-        renderImageGallery('3d')+
         '<div class="service-modal-grid">'+
           card('<img src="'+galleryImages["3d"][1]+'" alt="Impresión 3D">','IMPRESIÓN','Pieza personalizada','Galería de artículos y piezas impresas.')+
           card('<img src="'+galleryImages["3d"][0]+'" alt="Prototipo 3D">','PROTOTIPO','Diseño y prototipado','Modelos, pruebas y piezas funcionales.')+
