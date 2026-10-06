@@ -185,11 +185,18 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
     ],
 
     community:[
+      "https://www.instagram.com/p/DDsURjdBxEU/",
+      "https://www.instagram.com/p/DB7lfwivfUQ/",
+      "https://www.instagram.com/p/C7PxSj0svfU/",
+      "https://www.instagram.com/p/C2nDkEwOH_h/",
+      "https://www.instagram.com/p/C83G7DlI2bG/",
+      "https://www.instagram.com/p/C8SdeRgxHGR/",
       "https://www.instagram.com/p/DVJ2Yu7gAHX/",
       "https://www.instagram.com/p/DcHXtKHv4s7/",
       "https://www.instagram.com/p/DROQ5OViugO/",
+      "https://www.instagram.com/p/DP7bpvAAdde/",
       "https://www.instagram.com/p/DROPF8Ziktm/",
-      "https://www.instagram.com/p/DBrCpj-qzIH/"
+      "https://www.instagram.com/p/DJC8u4cTs-M/"
     ],
 
     developer:[
