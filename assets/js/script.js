@@ -149,10 +149,10 @@ window.openOther = window.openOther || ((sectionId) => showPage(sectionId));
     community:[
       "./assets/images/cmm-1.jpg",
       "./assets/images/cmm-2.jpg",
-      "./assets/images/cmm-3.png",
+      "./assets/images/cmm-3.jpg",
       "./assets/images/cmm-4.jpg",
       "./assets/images/cmm-5.jpg",
-      "./assets/images/cmm-6.png"
+      "./assets/images/cmm-6.jpg"
     ],
     developer:[
       "./assets/images/project-1.jpg",
